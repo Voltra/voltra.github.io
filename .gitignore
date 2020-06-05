@@ -1,27 +1,22 @@
-# Files
-.env
-.brackets.json
-package-lock.json
-yarn.lock
+.DS_Store
+node_modules
+/dist
 
-# Glob expanded files
-*.log
-*.swp
-*.so
-*.dll
-*.lib
-*.bkp
+# local env files
+.env.local
+.env.*.local
+
+# Log files
 npm-debug.log*
+yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
 
-# Directories
-tmp/
-logs/
-node_modules/
-bower_components/
-bin/
-dist/
-build/
-public/
-.vscode/
-.idea/
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
