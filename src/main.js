@@ -6,6 +6,8 @@ import store from './store'
 
 Vue.config.productionTip = false
 
+Vue.component(Button.name, Button);
+
 new Vue({
   router,
   store,

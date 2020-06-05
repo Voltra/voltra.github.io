@@ -1,2 +1,7 @@
 User-agent: *
-Disallow:
+Disallow: /.browserslistrc
+Disallow: /.gitignore
+Disallow: /.nojekyll
+Disallow: /babel.config.js
+Disallow: /vue.config.js
+Disallow: /package.json

@@ -8,9 +8,9 @@
 			
 			<main>
 				<a href="https://github.com/Voltra" class="link">
-					<button class="btn">
+					<a-button class="btn">
 						Voir les dépôts Github&nbsp;<span class="caret">&#x203A;</span>
-					</button>
+					</a-button>
 				</a>
 			</main>
 		</div>
