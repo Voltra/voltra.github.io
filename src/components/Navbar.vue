@@ -1,6 +1,9 @@
 <template>
 	<a-layout-header class="nav">		
-		<a-page-header ref="header" :avatar="{...avatar}" :backIcon="false" title="Ludwig">			
+		<a-page-header ref="header" :backIcon="false">
+			<p slot="title">
+				<a-avatar v-bind="avatar"/> Ludwig
+			</p>
 			<a-menu class="menu" slot="extra" mode="horizontal" @click="onClick" :selectedKeys="[extractKey($route)]">
 				<a-menu-item v-for="route in $router.options.routes" :key="extractKey(route)">
 					<a-icon :type="extractIcon(route)"/> {{ extractTitle(route) }}
@@ -13,10 +16,10 @@
 <script>
 	export default {
 		mounted(){
-			Object.keys(this.avatar)
+			/*Object.keys(this.avatar)
 			.forEach(key => {
 				this.$refs.header.$children[0].$props[key] = this.avatar[key];
-			});
+			});*/
 			
 			//TODO: Notify library authors of broken avatar
 		},
