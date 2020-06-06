@@ -1,34 +1,50 @@
 const path = require("path");
+const CopyPlugin = require('copy-webpack-plugin');
+const { asSequence } = require("sequency");
 
 const here = (uri = "") => path.resolve(__dirname, uri);
+const primary = "#0087B3";
+const favicon = "favicon.ico";
 
 module.exports = {
-	outputDir: here("assets"),
-	assetsDir: "assets",
-	indexPath: here("index.html"),
+	outputDir: here("docs"),
 	filenameHashing: false,
+	pwa: {
+		name: "Ludwig GUERIN - Voltra the dev",
+		themeColor: primary,
+		msTileColor: primary,
+		manifestOptions: {
+			start_url: "/",
+			short_name: "Ludwig GUERIN",
+			display: "standalone",
+			orientation: "portrait",
+			background_color: primary,
+		},
+	},
+	configureWebpack(config){
+		config.plugins.push(new CopyPlugin({
+			patterns: [
+				here("src/assets/"),
+			]
+		}));
+	},
 	css: {
-		requireModuleExtension: false,
+//		requireModuleExtension: false,
 		loaderOptions: {
 			scss: {},
 			less: {
 				lessOptions: {
-					modifyVars: {
-						"primary-color": "#0087B3",
-						"info-color": "#006181",
-						"error-color": "#B62222",
-						"warning-color": "#E9D30F",
-						"normal-color": "#D9D9D9",
-					},
 					javascriptEnabled: true,
 				},
 			},
 			postcss: {
-				plugins: [
-					require("css-mquery-packer")(),
-					require("autoprefixer")(),
-					require("cssnano")(),
-				],
+				plugins: asSequence([
+					"css-mquery-packer",
+					"autoprefixer",
+					"cssnano",
+				]).map(plugin => require(plugin))
+				.map(factory => factory())
+				.toArray(),
 			},
 		},
 	},

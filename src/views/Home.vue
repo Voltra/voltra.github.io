@@ -1,23 +1,21 @@
 <template>
-  <div class="wrapper">
-			<img class="logo" src="/assets/img/voltra.png" alt="Logo"/>
-			
-			<header>
-				<h1 class="title">En cours de développement</h1>
-			</header>
-			
-			<main>
-				<a href="https://github.com/Voltra" class="link">
-					<a-button class="btn">
-						Voir les dépôts Github&nbsp;<span class="caret">&#x203A;</span>
+	<a-card title="En cours de développement" class="wrapper">
+		<a-avatar slot="extra" class="logo" src="/voltra.png" alt="Logo" size="small"/>
+	  
+		<a-row type="flex" justify="center" align="middle">
+			<a-col :span="12">
+				<a href="https://github.com/Voltra">
+					<a-button type="primary">
+						Voir les dépôts Github
 					</a-button>
 				</a>
-			</main>
-		</div>
+			</a-col>
+		</a-row>
+	</a-card>
 </template>
 
 <script>
-export default {
-  name: 'Home',
-}
+	export default {
+	  name: 'Home',
+	}
 </script>

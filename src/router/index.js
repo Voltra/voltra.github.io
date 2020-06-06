@@ -4,10 +4,28 @@ import Route from "vue-routisan"
 import Home from "../views/Home.vue"
 
 Vue.use(VueRouter)
-Route.setViewResolver(uri => import(`../views/${uri}.vue`));
+Route.setViewResolver(uri => {
+	return typeof uri === "string"
+	? import("../views/" + uri + ".vue")
+	: uri;
+});
 
-Route.view("/", Home).name("Home");
-Route.view("/about", "About").name("About");
+Route.view("/", Home).name("Home").options({
+	meta: {
+		nav: {
+			title: "Accueil",
+			icon: "home",
+		},
+	}
+});
+Route.view("/about", "About").name("About").options({
+	meta: {
+		nav: {
+			title: "Truc bidule",
+			icon: "border-outer",
+		},
+	}
+});
 
 const router = new VueRouter({
 	mode: "history",
