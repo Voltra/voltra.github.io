@@ -1,9 +1,10 @@
 <template>
 	<a-layout-header class="nav">		
 		<a-page-header ref="header" :backIcon="false">
-			<p slot="title">
+			<p class="nav__title" slot="title">
 				<a-avatar v-bind="avatar"/> Ludwig
 			</p>
+			
 			<a-menu class="menu" slot="extra" mode="horizontal" @click="onClick" :selectedKeys="[extractKey($route)]">
 				<a-menu-item v-for="route in $router.options.routes" :key="extractKey(route)">
 					<a-icon :type="extractIcon(route)"/> {{ extractTitle(route) }}
@@ -26,9 +27,9 @@
 		data(){
 			return {
 				avatar: {
-					src: "/voltra.png",
+					src: "/img/voltra.png",
 					alt: "Logo",
-					size: "medium",
+					size: "large",
 				}
 			};
 		},
@@ -69,18 +70,30 @@
 	}
 </script>
 
-<style lang="scss">	
+<style lang="scss">
+	@import "~@/scss/settings";
+	
 	.logo{
 		text-align: center;
 	}
 	
-	.menu{
+	.menu{		
 		&, & > *:first-child ~ .ant-menu-item{
 			border-top-left-radius: 1em;
 		}
 		
 		&, & > *:last-child ~ .ant-menu-item{
 			border-top-right-radius: 1em;
+		}
+	}
+	
+	.nav{
+		padding: 0 !important;
+		
+		@include mq($until: md){
+			&__title{
+				margin: 0;
+			}
 		}
 	}
 </style>

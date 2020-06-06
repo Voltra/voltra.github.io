@@ -5,7 +5,7 @@
 
 			<a-layout-content>
 				<a-row class="container" type="flex" justify="center" align="middle">
-					<a-col :xs="12" :sm="10" :l="8" :xl="6">
+					<a-col :xs="11" :sm="10" :l="8" :xl="6">
 						<router-view/>
 					</a-col>
 					
@@ -13,8 +13,8 @@
 				</a-row>
 			</a-layout-content>
 
-			<a-layout-footer style="text-align: center; padding: 2em 1em;">
-				<span>Ludwig GUERIN ©2020</span> <GdprOpener :gdpr="$refs.gdpr"/> <br/>
+			<a-layout-footer class="footer">
+				<span class="foot">Ludwig GUERIN &copy;2020<GdprOpener class="opener" :gdpr="$refs.gdpr"/></span><br/>
 				<keep-alive>
 					<GdprBanner ref="gdpr"/>
 				</keep-alive>
@@ -49,5 +49,20 @@
 	.main, .container{
 		min-height: 100%;
 		height: 100%;
+	}
+	
+	.foot{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	
+	.footer{
+		text-align: center;
+		padding: 2em 1em 0 1em !important;
+	}
+	
+	.opener{
+		margin-left: 1em;
 	}
 </style>

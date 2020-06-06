@@ -1,32 +1,34 @@
 <template>
-	<a-card class="gdpr-banner" v-show="opened">
-		<Gdpr
-			ref="gdpr"
-			:opened="openModal"
-			@close="close"/>
+	<a-layout>
+		<a-card class="gdpr-banner" v-show="opened">
+			<Gdpr
+				ref="gdpr"
+				:opened="openModal"
+				@close="close"/>
 
-		<div class="gdpr-banner__text">
-			Nous utilisons des cookies pour garantir le fonctionnement du site.
-		</div>
+			<div class="gdpr-banner__text">
+				Nous utilisons des cookies pour garantir le fonctionnement du site.
+			</div>
 
-		<a-button-group class="gdpr-banner__buttons">
-			<a-button type="danger" class="gdpr-banner__disable" @click="disableAll">
-				Tout refuser
-			</a-button>
+			<a-button-group class="gdpr-banner__buttons">
+				<a-button type="danger" class="gdpr-banner__disable" @click="disableAll">
+					Tout refuser
+				</a-button>
 
-			<a-button type="success" class="gdpr-banner__disable" @click="enableAll">
-				Tout accepter
-			</a-button>
+				<a-button type="success" class="gdpr-banner__disable" @click="enableAll">
+					Tout accepter
+				</a-button>
 
-			<a-button type="info" class="gdpr-banner__tweak" @click="open">
-				Modifier
-			</a-button>
+				<a-button type="info" class="gdpr-banner__tweak" @click="open">
+					Modifier
+				</a-button>
 
-			<a-button type="primary" class="gdpr-banner__accept" @click="save">
-				OK
-			</a-button>
-		</a-button-group>
-	</a-card>
+				<a-button type="primary" class="gdpr-banner__accept" @click="save">
+					OK
+				</a-button>
+			</a-button-group>
+		</a-card>
+	</a-layout>
 </template>
 
 <script>
