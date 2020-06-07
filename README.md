@@ -7,6 +7,10 @@
   * [x] app color
   * [x] icons
   * [x] name
+* [ ] SEO (vue-meta ?)
+	* [ ] OG images
+	* [ ] Descriptions
+	* [ ] Tags
 * [ ] Add components
   * [ ] github repo details
   * [ ] internships (and previous work experience) details

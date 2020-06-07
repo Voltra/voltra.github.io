@@ -3,7 +3,7 @@
 		<a-layout class="main">
 			<Navbar/>
 
-			<a-layout-content>
+			<a-layout-content style="display: flex">
 				<a-row class="container" type="flex" justify="center" align="middle">
 					<a-col :xs="11" :sm="10" :l="8" :xl="6">
 						<router-view/>
@@ -41,14 +41,14 @@
 	#app{
 		width: 100vw;
 		height: 100vh;
-		
-		overflow-x: hidden;
-		overflow-y: auto;
 	}
 	
-	.main, .container{
+	.main{
+		min-height: 100vh !important;
+	}
+
+	.container{
 		min-height: 100%;
-		height: 100%;
 	}
 	
 	.foot{

@@ -1,12 +1,44 @@
 <template>
-	<a-card title="En cours de développement" class="wrapper">
-		<a-avatar slot="extra" class="logo" src="/img/voltra.png" alt="Logo" size="small"/>
+	<a-card title="Qui suis-je ?" class="wrapper">
+		<a-avatar slot="extra" class="logo" src="/img/voltra.png" alt="Logo" size="large"/>
 
 		<a-row type="flex" justify="center" align="middle">
-			<a-col :span="12">
-				<a-button type="primary">
-					<a href="https://github.com/Voltra">Voir les dépôts Github</a>
-				</a-button>
+			<a-col :xs="8" :lg="4" style="text-align: center">
+				<a-avatar src="/img/ludwig.png" alt="Photo" :size="128"/>
+			</a-col>
+
+			<a-col :xs="10" :lg="8" style="text-align: justify">
+				Je m'appelle Ludwig GUERIN et je suis passionné d'informatique
+				depuis l'âge de 15 ans. Je suis autodidacte en programmation et ingénieur
+				en informatique de formation. Bien que développeur polyvalent,
+				je me spécialise dans le monde du web et plus précisemment en intégration web.<br/>
+				<br/>
+				Ma vie est dirigée par les diverses passions qui m'animent, que
+				ce soit :
+				<ul>
+					<li>La programmation</li>
+					<li>La musique (je suis pianiste depuis l'âge de 7 ans)</li>
+					<li>Les jeux vidéo (pour la stimulation mentale continue)</li>
+					<li>Les comics</li>
+				</ul>
+				<br/>
+				<a-row type="flex" justify="center" align="middle">
+					<a-col :xs="12" :md="8" :lg="6">
+						<a-button type="secondary">
+							<router-link :to="{name: 'Projects'}">
+								Voir mes projets personnels
+							</router-link>
+						</a-button>
+					</a-col>
+
+					<a-col :xs="12" :md="8" :lg="6">
+						<a-button type="primary">
+							<router-link :to="{name: 'Cv'}">
+								Voir mon CV en ligne
+							</router-link>
+						</a-button>
+					</a-col>
+				</a-row>
 			</a-col>
 		</a-row>
 	</a-card>

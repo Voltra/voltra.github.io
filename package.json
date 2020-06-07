@@ -7,6 +7,7 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
+    "@octokit/rest": "^17.10.0",
     "@voltra/json": "^3.0.1",
     "ant-design-vue": "^1.2.4",
     "core-js": "^3.6.5",
