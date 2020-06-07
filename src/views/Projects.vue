@@ -10,7 +10,7 @@
 
 	const octokit = new Octokit({
 		userAgent: "voltra.github.io vX.Y.Z"
-	}});
+	});
 
 	export default {}
 </script>

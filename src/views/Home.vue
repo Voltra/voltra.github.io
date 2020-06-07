@@ -1,4 +1,5 @@
 <template>
+	<!--TODO: Fix spacing issues w/ header & footer -->
 	<a-card title="Qui suis-je ?" class="wrapper">
 		<a-avatar slot="extra" class="logo" src="/img/voltra.png" alt="Logo" size="large"/>
 
@@ -21,6 +22,8 @@
 					<li>Les jeux vidéo (pour la stimulation mentale continue)</li>
 					<li>Les comics</li>
 				</ul>
+				J'utilise également le pseudonyme de développeur <em>Voltra the dev</em>,
+				ou plus simplement <em>Voltra</em>, identifiable au logo bleu avec un L blanc.<br/>
 				<br/>
 				<a-row type="flex" justify="center" align="middle">
 					<a-col :xs="12" :md="8" :lg="6">
