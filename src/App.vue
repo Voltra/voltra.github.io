@@ -38,8 +38,10 @@
 </script>
 
 <style lang="scss">
+	@import "~@/scss/settings.scss";
+	
 	#app{
-		width: 100vw;
+		width: 100%;
 		height: 100vh;
 	}
 	
@@ -59,7 +61,9 @@
 	
 	.footer{
 		text-align: center;
-		padding: 2em 1em 0 1em !important;
+		padding: 0 1em !important;
+
+		padding-top: 1em !important;
 	}
 	
 	.opener{

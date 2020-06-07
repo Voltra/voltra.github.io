@@ -1,6 +1,6 @@
 <template>
 	<a-layout-header class="nav">		
-		<a-page-header ref="header" :backIcon="false">
+		<a-page-header  class="nav__header" ref="header" :backIcon="false">
 			<p class="nav__title" slot="title">
 				<a-avatar v-bind="avatar"/> Ludwig
 			</p>
@@ -89,10 +89,23 @@
 	
 	.nav{
 		padding: 0 !important;
-		
+		height: auto !important;
+
 		@include mq($until: md){
 			&__title{
 				margin: 0;
+			}
+		}
+
+		@include mq($from: md){
+			&__header > *{
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+
+				& > *{
+					float: none;
+				}
 			}
 		}
 	}

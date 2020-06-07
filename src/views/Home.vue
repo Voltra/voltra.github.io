@@ -26,7 +26,7 @@
 				ou plus simplement <em>Voltra</em>, identifiable au logo bleu avec un L blanc.<br/>
 				<br/>
 				<a-row type="flex" justify="center" align="middle">
-					<a-col :xs="12" :md="8" :lg="6">
+					<a-col class="btn" :xs="12" :md="8" :lg="6">
 						<a-button type="secondary">
 							<router-link :to="{name: 'Projects'}">
 								Voir mes projets personnels
@@ -34,7 +34,7 @@
 						</a-button>
 					</a-col>
 
-					<a-col :xs="12" :md="8" :lg="6">
+					<a-col class="btn" :xs="12" :md="8" :lg="6">
 						<a-button type="primary">
 							<router-link :to="{name: 'Cv'}">
 								Voir mon CV en ligne
@@ -52,3 +52,21 @@
 	  name: "Home",
 	}
 </script>
+
+<style lang="scss" scoped>
+	@import "~@/scss/settings";
+
+	.btn{
+		& > *{
+			margin: .5em auto;
+		}
+
+		width: auto;
+
+		@include mq($from: md){
+			& + &{
+				margin-left: 1em;
+			}
+		}
+	}
+</style>
