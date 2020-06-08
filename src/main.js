@@ -7,6 +7,7 @@ import "./plugins/ant-design-vue"
 import "./plugins/json"
 import "./plugins/localStorage"
 import "./plugins/gdpr"
+import "./plugins/clipboard"
 
 //Vue.config.productionTip = false;
 

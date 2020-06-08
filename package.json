@@ -17,6 +17,7 @@
     "sequency": "^0.19.2",
     "store": "^2.0.12",
     "vue": "^2.6.11",
+    "vue-clipboard2": "^0.3.1",
     "vue-flip-toolkit": "^1.6.0",
     "vue-gdpr-guard": "^1.0.2",
     "vue-router": "^3.2.0",
