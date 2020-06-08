@@ -8,6 +8,7 @@ import "./plugins/json"
 import "./plugins/localStorage"
 import "./plugins/gdpr"
 import "./plugins/clipboard"
+import "./plugins/meta"
 
 //Vue.config.productionTip = false;
 

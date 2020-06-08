@@ -14,5 +14,5 @@
 * [ ] Add components
   * [ ] github repo details
   * [ ] internships (and previous work experience) details
-  * [ ] contact
+  * [x] contact
   * [ ] blog system *[optional]*

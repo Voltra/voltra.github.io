@@ -18,8 +18,8 @@
 					<a-col>
 						<a-button
 							type="primary"
-							icon="mail"
-							@click="doCopy"/>
+							@click="doCopy">
+							<a-icon type="mail"/>
 							<ExternalLink :href="`mailto:${mail}`" type="secondary">
 								Mail
 							</ExternalLink>
@@ -33,10 +33,19 @@
 
 <script>
 	import ExternalLink from "@/components/ExternalLink"
+	import { makeMeta } from "@/plugins/meta"	
 
 	const placement = "bottomRight";
 
+	const title = "Me contacter";
+	const description = "Me contacter dans un cadre professionnel";
+
 	export default {
+		metaInfo: makeMeta({
+			title,
+			description,
+			tags: "contact,professionnel,linkedin,mail",
+		}),
 		data(){
 			return {
 				mail: "ludwig.guerin.98@gmx.fr",

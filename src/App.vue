@@ -29,6 +29,65 @@
 	import Navbar from "@/components/Navbar"
 	
 	export default {
+		metaInfo(){
+			const url = (uri = "") => location.origin + uri;
+			const logo = url("/img/og.png");
+			const description = "Site officiel de Ludwig GUERIN, aka Voltra the dev";
+
+			return {
+				htmlAttrs: {
+					prefix: "og: http://ogp.me/ns#",
+				},
+				title: "Ludwig GUERIN",
+				titleTemplate: "%s | Ludwig GUERIN",
+				meta: [
+					//static
+					{
+						property: "og:type",
+						content: "website",
+					},
+					{
+						property: "og:site_name",
+						content: "Ludwig GUERIN",
+					},
+					{
+						property: "og:image",
+						content: logo,
+					},
+					{
+						property: "twitter:card",
+						content: "summary",
+					},
+					{
+						property: "twitter:image",
+						content: logo, 
+					},
+
+					//dynamic
+					{
+						vmid: "og:title",
+						property: "og:title",
+						content: "Ludwig GUERIN",
+						template: "%s | Ludwig GUERIN",
+					},
+					{
+						vmid: "og:description",
+						property: "og:description",
+						content: description,
+					},
+					{
+						vmid: "description",
+						property: "og:description",
+						content: description,
+					},
+					{
+						vmid: "keywords",
+						property: "keywords",
+						content: "",
+					},
+				],
+			};
+		},
 		components: {
 			GdprBanner,
 			GdprOpener,
