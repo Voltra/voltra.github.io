@@ -2,12 +2,13 @@
 	<ExternalLink :href="project.url">
 		<a-card hoverable>
 			<img
-				slot="project.cover"
+				slot="cover"
+				class="project__cover"
 				alt="Image de couverture"
-				:src="meta.imgUrl"/>
+				:src="coverUrl"/>
 
 			<a-card-meta :title="project.title"> 
-				<p slot="description" v-html="project.description">
+				<p style="text-align: justify;" slot="description" v-html="project.description">
 				</p>
 			</a-card-meta>
 
@@ -36,6 +37,8 @@
 	import VueTypes from "vue-types"
 	import ExternalLink from "@/components/ExternalLink"
 
+	const placement = "bottomRight";
+
 	export default {
 		components: {
 			ExternalLink,
@@ -44,6 +47,10 @@
 			project: VueTypes.shape({
 				type: VueTypes.custom(x => x === "website").isRequired,
 				url: VueTypes.string.isRequired,
+				cover: VueTypes.oneOfType([
+					VueTypes.string,
+					VueTypes.custom(x => x === null),
+				]).def(null),
 				title: VueTypes.string.isRequired,
 				description: VueTypes.string.isRequired,
 				extras: VueTypes.arrayOf(VueTypes.shape({
@@ -52,13 +59,25 @@
 				}).loose),
 			}).loose,
 		},
-		data(){
-			//TODO: Load metadata from URL
-			return {
-				meta: {
-					imgUrl: "#",
-				},
-			};
+		computed: {
+			coverUrl(){
+				if(this.project.cover === null)
+					return "#";
+
+				return this.project.cover.replace("{{ site }}", this.project.url);
+			},
 		},
 	}
 </script>
+
+<style lang="scss" scoped>
+	.project{
+		&__cover{
+			max-width: 100%;
+			width: auto;
+			height: auto;
+			max-height: 200px;
+			margin: 0 auto;
+		}
+	}
+</style>

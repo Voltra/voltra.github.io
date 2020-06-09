@@ -23,13 +23,13 @@
 					<li>Les comics</li>
 				</ul>
 				J'utilise également le pseudonyme de développeur <em>Voltra the dev</em>,
-				ou plus simplement <em>Voltra</em>, identifiable au logo bleu avec un L blanc.<br/>
+				ou plus simplement <em>Voltra</em>, identifiable au logo bleu marqué d'un L blanc.<br/>
 				<br/>
 				<a-row type="flex" justify="center" align="middle">
 					<a-col class="btn" :xs="12" :md="8" :lg="6">
 						<a-button type="secondary">
 							<router-link :to="{name: 'Projects'}">
-								Voir mes projets personnels
+								Voir mes projets
 							</router-link>
 						</a-button>
 					</a-col>
