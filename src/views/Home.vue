@@ -17,7 +17,7 @@
 				Ma vie est dirigée par les diverses passions qui m'animent, que
 				ce soit :
 				<ul>
-					<li>La programmation</li>
+					<li>La programmation (notamment le développement d'outils Open Source)</li>
 					<li>La musique (je suis pianiste depuis l'âge de 7 ans)</li>
 					<li>Les jeux vidéo (pour la stimulation mentale continue)</li>
 					<li>Les comics</li>
@@ -48,8 +48,18 @@
 </template>
 
 <script>
+	import { makeMeta } from "@/plugins/meta"	
+
+	const placement = "bottomRight";
+	const title = "Accueil";
+	const description = "Je m'appelle Ludwig GUERIN et je suis un développeur front-end.";
+
 	export default {
-	  name: "Home",
+		metaInfo: makeMeta({
+			title,
+			description,
+			tags: "ludwig,guerin,développeur,programmation,web,intégration,passion",
+		}),
 	}
 </script>
 

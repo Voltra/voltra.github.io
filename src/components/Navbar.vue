@@ -5,8 +5,8 @@
 				<a-avatar v-bind="avatar"/> Ludwig
 			</p>
 			
-			<a-menu class="menu" slot="extra" mode="horizontal" @click="onClick" :selectedKeys="[extractKey($route)]">
-				<a-menu-item v-for="route in $router.options.routes" :key="extractKey(route)">
+			<a-menu class="menu" slot="extra" mode="horizontal" @click="onClick" :selectedKeys="selectedKeys">
+				<a-menu-item v-for="route in routes" :key="extractKey(route)">
 					<a-icon :type="extractIcon(route)"/> {{ extractTitle(route) }}
 				</a-menu-item>
 			</a-menu>
@@ -39,6 +39,11 @@
 					.options.routes
 					.filter(route => this.isNavRoute(route));
 			},
+			selectedKeys(){
+				return [
+					this.extractKey(this.$route),
+				];
+			}
 		},
 		methods: {
 			isNavRoute(route){

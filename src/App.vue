@@ -6,7 +6,9 @@
 			<a-layout-content style="display: flex">
 				<a-row class="container" type="flex" justify="center" align="middle">
 					<a-col :xs="11" :sm="10" :l="8" :xl="6">
-						<router-view/>
+						<keep-alive>
+							<router-view/>
+						</keep-alive>
 					</a-col>
 					
 					<a-back-top/>

@@ -23,10 +23,10 @@
 
 	.ext-link{
 		&--secondary{
-			color: white;
+			color: white !important;
 			&::selection{
-				background: white;
-				color: $primary;
+				background: white !important;
+				color: $primary !important;
 			}
 		}
 	}
