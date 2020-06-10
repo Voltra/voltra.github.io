@@ -13,7 +13,7 @@
 			</a-card-meta>
 
 			<a-row
-				:gutter="16"
+				:gutter="[16, 16]"
 				slot="actions"
 				type="flex"
 				justify="center"

@@ -7,7 +7,7 @@
 
 			<a-layout-content style="display: flex">
 				<a-row class="container" type="flex" justify="center" align="middle">
-					<a-col :xs="11" :sm="10" :l="8"> <!-- :xl="6" -->
+					<a-col style="position: relative" :xs="11" :sm="10" :lg="9"> <!-- :xl="6" -->
 						<keep-alive>
 							<transition :name="transitionName" mode="out-in">
 								<router-view class="router"/>

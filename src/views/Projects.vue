@@ -7,7 +7,7 @@
 			   	:xs="11"
    				:md="6"
 			  	:xl="4"
-   				:class="project">
+   				class="project">
 					<keep-alive>
 						<Flipped :flipId="project.title" :translate="true" :opacity="true" :scale="true">
 							<GithubProject v-if="project.type === 'github'" :project="project"/>
@@ -65,7 +65,7 @@
 						cover: "/img/og.png",
 						repo: "voltra.github.io",
 						title: "Site officiel",
-						description: `Site statique de Ludwig GUERIN, aka "Voltra the dev".
+						description: `Site statique de Ludwig GUERIN, aka <em>"Voltra the dev"</em>.
 						Progressive Web App réalisé via l'écosystème Vue.
 						Il utilise notamment des outils tel que Vue CLI, vue-router,
 						vue-meta, SCSS et Ant Design pour accélérer le développement.`,
@@ -109,7 +109,7 @@
 						repo: "mvea",
 						cover: "{{ repo }}/raw/master/res/interactions.png",
 						title: "MVEA",
-						description: `Patron d'architecture logicielle, variante de MVC
+						description: `Patron d'architecture logicielle, variante de MVC,
 						en cours de spécification. Il vise à augmenter la réutilisabilité
 						des composants ainsi qu'à maximiser la séparation des responsabilités
 						tout en intégrant et en spécifiant des pratiques récurrentes dans les
@@ -129,7 +129,7 @@
 					{
 						type: "github",
 						repo: "gdpr-guard",
-						cover: "",
+						cover: "{{ repo }}/raw/master/gdpr-guard.png",
 						title: "GDPR Guard",
 						description: `Bibliothèque de gestion de préférences
 						RGPD permettant un listing précis ainsi qu'une logique conditionnelle

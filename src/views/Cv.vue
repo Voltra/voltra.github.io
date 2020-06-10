@@ -1,5 +1,74 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
+	<a-tabs
+		class="card-container"
+		type="card"
+		:defaultActiveKey="1"
+		:tabBarGutter="8">	
+		<a-tab-pane :key="1" tab="Introduction">
+			<CvIntroduction/>
+		</a-tab-pane>
+
+		<a-tab-pane :key="2" tab="Formation">
+			<Scholarships/>
+		</a-tab-pane>
+
+		<a-tab-pane :key="3" tab="Expériences professionnelles">
+			<PastExperiences/>
+		</a-tab-pane>
+	</a-tabs>
 </template>
+
+<script>
+	import CvIntroduction from "@/components/CvIntroduction"
+	import Scholarships from "@/components/Scholarships"
+	import PastExperiences from "@/components/PastExperiences"
+	import { makeMeta } from "@/plugins/meta"
+
+	const placement = "bottomRight";
+	const title = "CV en ligne";
+	const description = "Curriculum Vitae en ligne, complémenté par le reste du site.";
+
+	export default {
+		metaInfo: makeMeta({
+			title,
+			description,
+			tags: "curriculum,vitae,parcours,formation,expérience",
+		}),
+		components: {
+			CvIntroduction,
+			Scholarships,
+			PastExperiences,
+		},
+	}
+</script>
+
+<style lang="scss">
+	@import "~@/scss/settings";
+
+	.card-container .ant-tabs-content /*> .ant-tabs-tabpane*/ {
+		background: #fff;
+		padding: 16px;
+	}
+	
+	.card-container .ant-tabs-bar {
+		border-color: #fff;
+		margin-bottom: 0;
+	}
+
+	.card-container .ant-tabs-bar .ant-tabs-tab {
+		border-color: transparent;
+		background: transparent;
+		border: none !important;
+
+		/*margin-right: 0.5em !important;
+
+		&:last-child{
+			margin-right: 0 !important;
+		}*/
+	}
+
+	.card-container .ant-tabs-bar .ant-tabs-tab-active {
+		border-color: #fff;
+		background: #fff;
+	}
+</style>
