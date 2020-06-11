@@ -15,6 +15,10 @@
 		<a-tab-pane :key="3" tab="Expériences professionnelles">
 			<PastExperiences/>
 		</a-tab-pane>
+
+		<a-tab-pane :key="4" tab="Compétences">
+			<Skills/>
+		</a-tab-pane>
 	</a-tabs>
 </template>
 
@@ -22,6 +26,7 @@
 	import CvIntroduction from "@/components/CvIntroduction"
 	import Scholarships from "@/components/Scholarships"
 	import PastExperiences from "@/components/PastExperiences"
+	import Skills from "@/components/Skills"
 	import { makeMeta } from "@/plugins/meta"
 
 	const placement = "bottomRight";
@@ -38,6 +43,7 @@
 			CvIntroduction,
 			Scholarships,
 			PastExperiences,
+			Skills,
 		},
 	}
 </script>

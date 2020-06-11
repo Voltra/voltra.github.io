@@ -7,10 +7,10 @@
 
 			<a-layout-content style="display: flex">
 				<a-row class="container" type="flex" justify="center" align="middle">
-					<a-col style="position: relative" :xs="11" :sm="10" :lg="9"> <!-- :xl="6" -->
+					<a-col style="position: relative" :xs="11" :lg="9"> <!-- :md="10" :xl="6" -->
 						<keep-alive>
-							<transition :name="transitionName" mode="out-in">
-								<router-view class="router"/>
+							<transition class="router" :name="transitionName" mode="out-in">
+								<router-view/>
 							</transition>
 						</keep-alive>
 					</a-col>
@@ -171,7 +171,7 @@
 
 
 	// Transitions
-	.slide-left-enter-active,
+	/*.slide-left-enter-active,
 	.slide-left-leave-active,
 	.slide-right-enter-active,
 	.slide-right-leave-active {
@@ -179,18 +179,18 @@
 		transition-property: height, opacity, transform;
 		transition-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
 		//overflow: hidden;
-	}
+	}*/
 
 	.slide-left-enter,
 	.slide-right-leave-active {
-		//opacity: 0;
-		transform: translate(100%, 0);
+		opacity: 0.5;
+		transform: translateX(100%);
 	}
 
 	.slide-left-leave-active,
 	.slide-right-enter {
-		//opacity: 0;
-		transform: translate(-100%, 0);
+		opacity: 0.5;
+		transform: translateX(-100%);
 	}
 
 	.fade-enter-active,

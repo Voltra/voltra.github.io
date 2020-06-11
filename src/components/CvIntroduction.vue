@@ -81,10 +81,17 @@
 						Je ne suis pas très à l'aise en présence d'autres personnes.
 						Cela me pousse donc à réduire mes communications au strict
 						minimum requis dans le contexte, ainsi qu'à maximiser
-						leur efficacité.
+						leur efficacité. Jusqu'à présent cela n'a jamais été
+						problématique pour les tâches nécessitant du travail
+						en équipe.
 					</a-collapse-panel>
 
-					<a-collapse-panel :key="3" header=""></a-collapse-panel>
+					<a-collapse-panel :key="3" header="Je manque de tact">
+						En conséquence certains de mes propos paraissent plus
+						durs qu'ils me paraissaient être, plus arrogants qu'ils
+						ne le sont et pouvant induire une mauvaise interprétation
+						de ma franchise.
+					</a-collapse-panel>
 				</a-collapse>
 			</a-card>
 		</a-col>
