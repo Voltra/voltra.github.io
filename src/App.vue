@@ -24,7 +24,14 @@
 			</a-layout-content>
 
 			<a-layout-footer class="footer">
-				<span class="foot">Ludwig GUERIN &copy;2020<GdprOpener class="opener" :gdpr="$refs.gdpr"/></span><br/>
+				<p class="foot">
+					<span>Ludwig GUERIN &copy;2020</span>
+					<GdprOpener class="opener" :gdpr="$refs.gdpr"/>
+					<router-link :to="{name: 'About'}">
+						Mentions légales
+					</router-link>
+				</p>
+				<!--<br/>-->
 				<keep-alive>
 					<GdprBanner ref="gdpr"/>
 				</keep-alive>
@@ -156,6 +163,16 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+
+		& > *{
+			display: block;
+
+			margin-left: 1em;
+
+			&:first-child{
+				margin-left: 0;
+			}
+		}
 	}
 	
 	.footer{
@@ -165,9 +182,9 @@
 		padding-top: 1em !important;
 	}
 	
-	.opener{
+	/*.opener{
 		margin-left: 1em;
-	}
+	}*/
 
 
 	// Transitions

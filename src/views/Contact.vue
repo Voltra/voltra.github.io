@@ -3,9 +3,9 @@
 		<a-icon slot="extra" type="notification"/>
 		<a-row type="flex" justify="center" align="middle">
 			<a-col :span="12">
-				Pour plus d'informations ou me contacter dans un cadre
+				Pour plus d'informations ou pour me contacter dans un cadre
 				professionnel, merci d'utiliser les moyens suivants&nbsp;:<br/>
-
+				<br/>
 				<a-row type="flex" justify="space-around" align="middle">
 					<a-col>
 						<a-button type="primary" icon="linkedin">

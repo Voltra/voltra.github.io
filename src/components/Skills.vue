@@ -159,7 +159,11 @@
 									</small>
 								</ExternalLink>
 							</li>
-							<li>Twig</li>
+							<li>
+								<ExternalLink href="https://github.com/Voltra/slim-vue-app/blob/master/dev/views/.partials/layout.twig">
+									Twig
+								</ExternalLink>
+							</li>
 							<li>
 								<ExternalLink href="https://github.com/Voltra/validatueur/blob/feature/VALIDATORS/tests/utils.test.ts">
 									Jest
@@ -176,7 +180,11 @@
 					<a-col v-bind="col"> 
 						Bibliothèques/Frameworks abordés&nbsp;:
 						<ul>
-							<li>Electron</li>
+							<li>
+								<ExternalLink href="https://github.com/Voltra/vuelectron-music/blob/master/src/index.js">
+									Electron
+								</ExternalLink>
+							</li>
 							<li>Flutter</li>
 							<li>Laravel</li>
 							<li>Drupal</li>
@@ -184,21 +192,54 @@
 							<li>React</li>
 							<li>Redux</li>
 							<li>Prestashop</li>
-							<li>Qt</li>
+							<li>
+								Qt
+								<small>
+									(
+									C++
+									)
+								</small>
+							</li>
 							<li>
 								<ExternalLink href="https://github.com/Voltra/cppcrow_test/blob/master/main.cpp">
 									Crow
+									<small>
+										(
+										C++
+										)
+									</small>
 								</ExternalLink>
 							</li>
-							<li>Boost</li>
+							<li>
+								Boost
+								<small>
+									(
+									C++
+									)
+								</small>
+							</li>
 							<li>
 								Symfony
 								<small>
 									(très légèrement)
 								</small>
 							</li>
-							<li>Nickel</li>
-							<li>Rocket</li>
+							<li>
+								Nickel
+								<small>
+									(
+									Rust
+									)
+								</small>
+							</li>
+							<li>
+								Rocket
+								<small>
+									(
+									Rust
+									)
+								</small>
+							</li>
 						</ul>
 					</a-col>
 				</a-row>
@@ -235,9 +276,30 @@
 									)
 								</small>
 							</li>
-							<li>IDE JetBrains</li>
+							<li>
+								IDE JetBrains
+								<small>
+									(
+									Intellij IDEA,
+									PHPStorm,
+									CLion,
+									Webstorm,
+									Android Studio
+									)
+								</small>
+							</li>
 							<li>Brackets</li>
 							<li>Visual Studio Code</li>
+							<li>
+								Suites bureautique
+								<small>
+									(
+									Microsoft Office,
+									Open Office,
+									Libre Office
+									)
+								</small>	
+							</li>
 						</ul>
 					</a-col>
 
@@ -253,8 +315,12 @@
 									)
 								</small>
 							</li>
+							<li>Redis</li>
 							<li>Docker</li>
 							<li>Ansible</li>
+							<li>WebSockets</li>
+							<li>ImageMagick</li>
+							<li>Photoshop</li>
 						</ul>
 					</a-col>
 				</a-row>

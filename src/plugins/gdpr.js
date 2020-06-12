@@ -1,10 +1,14 @@
 import Vue from "vue"
 import { VueGdprGuard } from "vue-gdpr-guard"
 import { GdprManagerBuilder, GdprDeserializer, GdprStorage } from "gdpr-guard"
+import moment from "moment"
 
 const storeKey = "gdpr";
 const versionKey = `${storeKey}__version`;
-const version = "3.0.1";
+const version = "3.1.0";
+
+//GDPR says max 13 months
+const expiration = () => moment().startOf("month").add(13, "months").toDate();
 
 const factory = () => {
 	return GdprManagerBuilder.make()
@@ -32,9 +36,11 @@ const updateSharedManager = (Vue, manager) => {
 };
 
 const restore = (Vue, shouldUpdate = true) => {
+	Vue.$localStorage.removeExpiredKeys(); // explicitely remove expired keys
+
 	if(!Vue.$localStorage.has(versionKey)){
 		// If no version is registered, boot up
-		Vue.$localStorage.set(versionKey, version);
+		Vue.$localStorage.set(versionKey, version, expiration());
 		Vue.$localStorage.remove(storeKey); //avoid localStorage'jacking
 	}
 
@@ -47,7 +53,7 @@ const restore = (Vue, shouldUpdate = true) => {
 
         if(!sameVersion){ // Handle semantic update
             Vue.$localStorage.remove(storeKey);
-			Vue.$localStorage.set(versionKey, version);
+			Vue.$localStorage.set(versionKey, version, expiration());
 			return null;
 		}else if(!!manager){ // no changes, give it back
 			if(shouldUpdate)
@@ -66,7 +72,7 @@ const exists = (Vue, shouldUpdate = true) => {
 };
 
 const store = (Vue, manager) => {
-	Vue.$localStorage.set(storeKey, manager);
+	Vue.$localStorage.set(storeKey, manager, expiration());
 	try{
 		return exists(Vue);
 	}catch(e){
