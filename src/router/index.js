@@ -48,6 +48,7 @@ Route.view("/contact", "Contact").name("Contact").options({
 Route.view("/mentions-legales", "About").name("About");
 
 const router = new VueRouter({
+	// mode: "hash",
 	mode: "history",
 	base: process.env.BASE_URL,
 	routes: Route.all(),

@@ -30,7 +30,49 @@
 		de la discipline, de l'assiduité et de la maîtrise de soi ; elle
 		entraîne également le fait d'être plus exigeant envers soi-même.<br/>
 		<br/>
-		azertyuiop
+		
+		Depuis l'adolescence, et encore plus  après ma découverte des
+		<ExternalLink href="https://fr.wikipedia.org/wiki/Sciences_de_l%27ing%C3%A9nieur">
+			sciences de l'ingénieur
+		</ExternalLink> au lycée, j'ai un intérêt et une fascination toute
+		particulière pour les nouvelles technologies. Après ma découverte de
+		l'informatique, cette fascination n'a cessé de croître. Que ce soit des
+		composants électroniques ou des nouveautés en terme d'ingénierie, j'apprécie
+		tout particulièrement ce qui touche à la robotique et la mécanique en général,
+		notamment dans le cadre de la 
+		<ExternalLink href="https://fr.wikipedia.org/wiki/Principe_fondamental_de_la_statique">
+			statique
+		</ExternalLink>ou de la
+		<ExternalLink href="https://fr.wikipedia.org/wiki/Cin%C3%A9matique">
+			cinématique
+		</ExternalLink>. Au-delà de la mécanique, j'ai un intérêt tout particulier
+		sur les avancées des langages et outils de programmation. Je me tiens à jour
+		très régulièrement par le biais des diverses
+		<ExternalLink href="https://www.youtube.com/watch?v=u_ij0YNkFUs">
+			conférences
+		</ExternalLink>, des documentations techniques ou tout simplement en
+		parcourant les dépôts GitHub et paquets NPM à la recherche de nouveautés.<br/>
+		<br/>
+
+		En plus de la pratique de la musique, j'apprécie tout particulièrement
+		son écoute et son analyse (en utilisant mes restes de solfège). Je n'ai
+		pas de style ou d'artistes favoris, je tombe généralement sur une oeuvre
+		que j'apprécie en tant que tel. Il m'arrive parfois, tel un professeur de
+		français au lycée, de rêvasser à des significations quelconques qu'elles
+		proviennent des paroles ou de la structure musicale en elle-même.
+		J'ai une appréiation toute particulière pour les arrangements orchestraux,
+		certains sous-genres electro et les musiques contemporaines suivant des
+		structures classiques.<br/>
+		<br/>
+
+		Pendant mes études, j'ai développé un amour notable pour le monde de
+		l'open source. Je développe
+		<ExternalLink href="https://github.com/Voltra">
+			mes propres outils
+		</ExternalLink>depuis mes premiers pas
+		en programmation, généralement pour résoudre des problèmes récurrents
+		que je peux rencontrer. Je crois en la mise à dispostion libre d'outils
+		et de rentabiliser uniquement les applications qui les utilisent.
 	</a-card>
 </template>
 

@@ -9,6 +9,9 @@
 				Passionné du monde du web, j'aime mettre à profit les dernières
 				technologies afin de mettre en place des applications uniques
 				et robustes.<br/>
+				Je n'ai aucune envie de diriger une équipe et donc par conséquent
+				d'être chef de projets. Je m'épanouis davantage en tant
+				qu'intégrateur&nbsp;&mdash;&nbsp;ou développeur&nbsp;&mdash;&nbsp;web.<br/>
 				<br/>
 				3 qualités&nbsp;:
 				<a-collapse :defaultActiveKey="1">
@@ -94,6 +97,16 @@
 					</a-collapse-panel>
 				</a-collapse>
 			</a-card>
+			
+			<a-row type="flex" justify="center" align="middle">
+				<a-col>
+					<a-button type="primary">
+						<ExternalLink type="secondary" href="https://github.com/Voltra">
+							Voir ma profil GitHub
+						</ExternalLink>
+					</a-button>
+				</a-col>
+			</a-row>
 		</a-col>
 	</a-row>
 </template>
