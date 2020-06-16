@@ -59,7 +59,7 @@
 		pas de style ou d'artistes favoris, je tombe généralement sur une oeuvre
 		que j'apprécie en tant que tel. Il m'arrive parfois, tel un professeur de
 		français au lycée, de rêvasser à des significations quelconques qu'elles
-		proviennent des paroles ou de la structure musicale en elle-même.
+		proviennent du texte ou de la structure musicale en elle-même.
 		J'ai une appréiation toute particulière pour les arrangements orchestraux,
 		certains sous-genres electro et les musiques contemporaines suivant des
 		structures classiques.<br/>
@@ -71,8 +71,11 @@
 			mes propres outils
 		</ExternalLink>depuis mes premiers pas
 		en programmation, généralement pour résoudre des problèmes récurrents
-		que je peux rencontrer. Je crois en la mise à dispostion libre d'outils
-		et de rentabiliser uniquement les applications qui les utilisent.
+		que je peux rencontrer. Je crois en une informatique libre, ouverte et
+		gratuite où le profit et la visibilité seraient fait sur la composition et les réalisations
+		logicielles plutôt que sur leurs composants. Cela permettrait une meilleure
+		apréhension, une forme d'uniformisation des ressources et sûrement un
+		climat plus sain dans le milieu.
 	</a-card>
 </template>
 
