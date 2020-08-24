@@ -1,5 +1,5 @@
 const path = require("path");
-const CopyPlugin = require('copy-webpack-plugin');
+const CopyPlugin = require("copy-webpack-plugin");
 const { asSequence } = require("sequency");
 
 const here = (uri = "") => path.resolve(__dirname, uri);
@@ -21,7 +21,7 @@ module.exports = {
 			background_color: primary,
 		},
 	},
-	configureWebpack(config){
+	configureWebpack(config) {
 		config.plugins.push(new CopyPlugin({
 			patterns: [
 				here("src/assets/"),
@@ -29,7 +29,7 @@ module.exports = {
 		}));
 	},
 	css: {
-//		requireModuleExtension: false,
+		//		requireModuleExtension: false,
 		loaderOptions: {
 			scss: {},
 			less: {
@@ -43,8 +43,8 @@ module.exports = {
 					"autoprefixer",
 					"cssnano",
 				]).map(plugin => require(plugin))
-				.map(factory => factory())
-				.toArray(),
+					.map(factory => factory())
+					.toArray(),
 			},
 		},
 	},
