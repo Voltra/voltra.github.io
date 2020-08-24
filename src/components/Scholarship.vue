@@ -5,12 +5,16 @@
 				{{ yearText }}
 			</p>
 
+			<h2>
+				{{ scholarship.title }}
+			</h2>
+
 			<p v-html="scholarship.description"></p>
 			<template v-if="scholarship.interests.length">
 				<br/>
 				<p>Matières principales&nbsp;:</p>
 				<ul>
-					<li v-for="interest in scholarship.interests">
+					<li v-for="interest in scholarship.interests" :key="interest">
 						{{ interest }}
 					</li>
 				</ul>

@@ -6,12 +6,15 @@
 				<img class="experience__logo" :src="experience.company.logo" :alt="experience.company.name"/>
 			</p>
 
+			<h2>
+				{{ experience.title }}
+			</h2>
 			<p v-html="experience.description"></p>
 			<template v-if="experience.interests.length">
 				<br/>
 				<p>Compétences mobilisées&nbsp;:</p>
 				<ul>
-					<li v-for="interest in experience.interests">
+					<li v-for="interest in experience.interests" :key="interest">
 						{{ interest }}
 					</li>
 				</ul>

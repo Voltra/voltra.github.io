@@ -75,7 +75,7 @@
 		<a-row type="flex" justify="center" align="middle" :gutter="[16,16]">
 			<a-col>
 				<a-button type="primary">
-					<router-link to="{name: 'Home'}">
+					<router-link :to="{name: 'Home'}">
 						Retourner à l'accueil
 					</router-link>
 				</a-button>

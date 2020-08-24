@@ -102,7 +102,7 @@
 				<a-col>
 					<a-button type="primary">
 						<ExternalLink type="secondary" href="https://github.com/Voltra">
-							Voir ma profil GitHub
+							Voir mon profil GitHub
 						</ExternalLink>
 					</a-button>
 				</a-col>

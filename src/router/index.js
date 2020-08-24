@@ -2,10 +2,10 @@ import Vue from "vue"
 import VueRouter from "vue-router"
 import Route from "vue-routisan"
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 Route.setViewResolver(uri => {
 	return typeof uri === "string"
-	? () => import("../views/" + uri + ".vue")
+	? () => import(`../views/${uri}.vue`)
 	: uri;
 });
 
@@ -47,9 +47,11 @@ Route.view("/contact", "Contact").name("Contact").options({
 
 Route.view("/mentions-legales", "About").name("About");
 
+Route.view("*", "404").name("404");
+
 const router = new VueRouter({
-	// mode: "hash",
-	mode: "history",
+	mode: "hash",
+	// mode: "history",
 	base: process.env.BASE_URL,
 	routes: Route.all(),
 })

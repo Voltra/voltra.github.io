@@ -8,22 +8,22 @@
 				<br/>
 				<a-row type="flex" justify="space-around" align="middle">
 					<a-col>
-						<a-button type="primary" icon="linkedin">
-							<ExternalLink :href="linkedin" type="secondary">
-								LinkedIn
-							</ExternalLink>
-						</a-button>
-					</a-col>
+						<a-button-group>
+								<a-button type="primary" icon="linkedin">
+									<ExternalLink :href="linkedin" type="secondary">
+										LinkedIn
+									</ExternalLink>
+								</a-button>
 
-					<a-col>
-						<a-button
-							type="primary"
-							@click="doCopy">
-							<a-icon type="mail"/>
-							<ExternalLink :href="`mailto:${mail}`" type="secondary">
-								Mail
-							</ExternalLink>
-						</a-button>
+								<a-button
+									type="primary"
+									@click="doCopy">
+									<a-icon type="mail"/>
+									<ExternalLink :href="`mailto:${mail}?subject=[CONTACT PRO] `" type="secondary">
+										Mail
+									</ExternalLink>
+								</a-button>
+						</a-button-group>
 					</a-col>
 				</a-row>
 			</a-col>
