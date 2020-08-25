@@ -8,6 +8,7 @@
 
 <script>
 	import Scholarship from "@/components/Scholarship"
+	import { withUtm } from "../utils"
 
 	export default {
 		components: {

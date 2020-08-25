@@ -8,6 +8,7 @@
 
 <script>
 	import PastExperience from "@/components/PastExperience"
+	import { withUtm } from "../utils"
 
 	const Companies = {
 		SWPL: {
