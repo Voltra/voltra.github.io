@@ -10,7 +10,7 @@
 			</a-card>
 
 			<a-card v-bind="card" title="Langages de programmation">
-				<a-row v-bind="row"> 
+				<a-row v-bind="row">
 					<a-col v-bind="col">
 						Langages maîtrisés&nbsp;:
 						<ul>
@@ -102,8 +102,8 @@
 			</a-card>
 
 			<a-card v-bind="card" title="Bibliothèques et frameworks">
-				<a-row v-bind="row"> 
-					<a-col v-bind="col"> 
+				<a-row v-bind="row">
+					<a-col v-bind="col">
 						Bibliothèques/Frameworks maîtrisés&nbsp;:
 						<ul>
 							<li>
@@ -185,7 +185,7 @@
 						</ul>
 					</a-col>
 
-					<a-col v-bind="col"> 
+					<a-col v-bind="col">
 						Bibliothèques/Frameworks abordés&nbsp;:
 						<ul>
 							<li>
@@ -306,7 +306,7 @@
 									Open Office,
 									Libre Office
 									)
-								</small>	
+								</small>
 							</li>
 						</ul>
 					</a-col>
@@ -314,7 +314,11 @@
 					<a-col v-bind="col">
 						Outils appréhendés&nbsp;:
 						<ul>
-							<li>Vim</li>
+							<li>
+								<ExternalLink href="https://github.com/Voltra/dotfiles/blob/master/.vimrc">
+									Vim
+								</ExternalLink>
+							</li>
 							<li>
 								NoSQL
 								<small>

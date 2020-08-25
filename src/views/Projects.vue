@@ -31,7 +31,7 @@
 	import { Flipped, Flipper } from "vue-flip-toolkit"
 	import GithubProject from "@/components/GithubProject"
 	import WebsiteProject from "@/components/WebsiteProject"
-	import { makeMeta } from "@/plugins/meta"	
+	import { makeMeta } from "@/plugins/meta"
 
 	const placement = "bottomRight";
 	const title = "Mes Projets";
@@ -119,7 +119,7 @@
 						type: "github",
 						repo: "validatueur",
 						cover: "{{ repo }}/raw/dev/res/validatueur.svg",
-						title: "Validatueur : Assainissement et validation",
+						title: "Validatueur",
 						description: `Bibliothèque JavaScript d'aissainissement et de validation
 						visant à être utilisable dans toute application, quelle que soit
 						la complexité des formulaires. Destiné à pouvoir être utilisé

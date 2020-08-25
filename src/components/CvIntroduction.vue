@@ -42,6 +42,7 @@
 						Open Source que je développe, à la fois pour régler mes
 						propres problèmes récurrents mais également pour permettre
 						à tous d'en profiter.<br/>
+						<br/>
 						On peut également noter que je suis actif sur
 						<ExternalLink href="https://stackoverflow.com/users/7316365/vivick" type="primary">
 							StackOverflow
@@ -53,7 +54,7 @@
 						Que ce soit lors de mes divers stages ou lors de mes études,
 						beaucoup de situations que l'on pourrait qualifier de
 						stressantes ou critiques se sont présentées à moi.
-						J'ai abordée chacune avec sang froid et sans jamais
+						J'ai abordé chacune avec sang froid et sans jamais
 						ressentir une quelconque forme de pression.<br/>
 						<br/>
 						Un bon exemple serait, suite à un malentendu sur mon
@@ -97,7 +98,7 @@
 					</a-collapse-panel>
 				</a-collapse>
 			</a-card>
-			
+
 			<a-row type="flex" justify="center" align="middle">
 				<a-col>
 					<a-button type="primary">

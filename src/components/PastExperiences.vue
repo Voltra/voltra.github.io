@@ -38,12 +38,13 @@
 				},
 				experiences: [
 					{
+						//TODO: More details in the description
 						timeSpan: "Juillet 2020 - Août 2020",
 						title: "Stage en développement web (Full Stack)",
 						description: `Dans le cadre de la seconde année du
 						cycle ingénieur à Polytech, la plupart des élèves effectuent
 						un stage à l'étranger pour remplir les obligations de la formation d'ingénieur.
-						Suite à la pandémie de Covid 19, les obligations de mobilité à l'étranger ont dû
+						Suite à la pandémie de Covid-19, les obligations de mobilité à l'étranger ont dû
 						être supprimées. Pour bénéficier de plus d'expérience professionnelle,
 						j'ai pu à nouveau rejoindre l'équipe technique de SWPL et leur prêter main forte.`,
 						company: Companies.SWPL,

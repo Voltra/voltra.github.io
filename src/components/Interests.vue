@@ -19,7 +19,7 @@
 		</ExternalLink>,
 		<ExternalLink href="https://www.youtube.com/watch?v=3oSPcj1lcF8">
 			de films
-		</ExternalLink> ou
+		</ExternalLink>,
 		<ExternalLink href="https://www.youtube.com/watch?v=Xqr9rICvaDg">
 			d'animés
 		</ExternalLink> ou encore
@@ -60,9 +60,9 @@
 		que j'apprécie en tant que tel et pas au sein d'un ensemble.
 		Il m'arrive parfois, tel un professeur de français au lycée, de rêvasser
 		à des significations quelconques qu'elles proviennent du texte ou de la
-		structure musicale en elle-même. J'ai une appréiation toute particulière
-		pour les arrangements orchestraux, certains sous-genres electro et les musiques
-		contemporaines suivant des structures classiques.<br/>
+		structure musicale en elle-même. J'ai une appréciation toute particulière
+		pour les arrangements orchestraux, certains sous-genres de l'electro ainsi que
+		les musiques contemporaines suivant des structures classiques.<br/>
 		<br/>
 
 		Pendant mes études, j'ai développé un amour notable pour le monde de
@@ -74,7 +74,7 @@
 		que je peux rencontrer. Je crois en une informatique libre, ouverte et
 		gratuite où le profit et la visibilité seraient construits sur la composition
 		et les réalisations logicielles plutôt que sur leurs composants individuels.
-		Cela permettrait une meilleure apréhension, une forme d'uniformisation des ressources
+		Cela permettrait une meilleure appréhension, une forme d'uniformisation des ressources
 		et sûrement un climat plus sain dans le milieu.
 	</a-card>
 </template>
