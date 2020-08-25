@@ -38,7 +38,6 @@
 				},
 				experiences: [
 					{
-						//TODO: More details in the description
 						timeSpan: "Juillet 2020 - Août 2020",
 						title: "Stage en développement web (Full Stack)",
 						description: `Dans le cadre de la seconde année du
@@ -46,7 +45,11 @@
 						un stage à l'étranger pour remplir les obligations de la formation d'ingénieur.
 						Suite à la pandémie de Covid-19, les obligations de mobilité à l'étranger ont dû
 						être supprimées. Pour bénéficier de plus d'expérience professionnelle,
-						j'ai pu à nouveau rejoindre l'équipe technique de SWPL et leur prêter main forte.`,
+						j'ai pu à nouveau rejoindre l'équipe technique de SWPL et leur prêter main forte.
+						J'ai pu entre autre approfondir mes connaissances du CMS Drupal en participant
+						au sitebuilding et en mettant en place divers outils simplifiant l'utilisation
+						par le client final. De plus, j'ai pu aider à l'intégration de landing pages ainsi qu'à
+						la refonte graphique de plusieurs sites.`,
 						company: Companies.SWPL,
 						interests: [
 							"Compétences connexes diverses",
