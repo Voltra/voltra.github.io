@@ -70,7 +70,7 @@
 			});
 		},
 		metaInfo(){
-			const url = (uri = "") => location.origin + uri;
+			const url = (uri = "") => `${location.origin}${uri}`;
 			const logo = url("/img/og.png");
 			const description = "Site officiel de Ludwig GUERIN, aka Voltra the dev";
 
