@@ -26,8 +26,8 @@
 			<a-collapse-panel :key="2" header="Hébergement">
 				Ce site internet est hébergé par Github par le biais du service
 				<ExternalLink href="https://pages.github.com/">
-					Github Pages
-				</ExternalLink>.
+					Github Pages.
+				</ExternalLink>
 
 				<ul>
 					<li>
@@ -68,7 +68,12 @@
 			<a-collapse-panel :key="3" header="Propriété Intellectuelle">
 				Les contenus présentés sur ce site sont propriétés intellectuelles
 				de leurs propriétaires respectifs. Ils ne sont pas à considérer comme
-				attribués au propriétaire du site.
+				attribués au propriétaire du site.<br/>
+				<br/>
+				Les designs utilisés pour la bannière Open Graph sont la propriété de
+				<ExternalLink href="https://www.freepik.com/pikisuperstar">
+					Pikisuperstar.
+				</ExternalLink>
 			</a-collapse-panel>
 		</a-collapse>
 		<br/>

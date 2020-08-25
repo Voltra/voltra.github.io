@@ -1,9 +1,9 @@
 <template>
 	<a-layout-header class="nav">		
 		<a-page-header  class="nav__header" ref="header" :backIcon="false">
-			<p class="nav__title" slot="title">
+			<router-link :to="{name: 'Home'}" class="nav__title" slot="title">
 				<a-avatar v-bind="avatar"/> Ludwig
-			</p>
+			</router-link>
 			
 			<a-menu class="menu" slot="extra" mode="horizontal" @click="onClick" :selectedKeys="selectedKeys">
 				<a-menu-item v-for="route in routes" :key="extractKey(route)">

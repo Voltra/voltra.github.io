@@ -3,7 +3,7 @@
 		'ext-link': true,
 		[`ext-link--${props.type}`]: true
 	}" :href="props.href" target="_blank">
-		<slot/>
+		<slot/><!-- &nbsp;<a-icon type="export"/> -->
 	</a>
 </template>
 

@@ -88,6 +88,14 @@
 							<li>Crystal</li>
 							<li>Less</li>
 							<li>D</li>
+							<li>
+								<ExternalLink href="https://github.com/Voltra/mobile-youtube-dl/tree/dev">
+									Dart
+									<small>
+										(et Flutter)
+									</small>
+								</ExternalLink>
+							</li>
 						</ul>
 					</a-col>
 				</a-row>
@@ -319,6 +327,7 @@
 							<li>Docker</li>
 							<li>Ansible</li>
 							<li>WebSockets</li>
+							<li>GraphQL</li>
 							<li>ImageMagick</li>
 							<li>Photoshop</li>
 						</ul>

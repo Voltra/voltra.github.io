@@ -38,6 +38,26 @@
 				},
 				experiences: [
 					{
+						timeSpan: "Juillet 2020 - Août 2020",
+						title: "Stage en développement web (Full Stack)",
+						description: `Dans le cadre de la seconde année du
+						cycle ingénieur à Polytech, la plupart des élèves effectuent
+						un stage à l'étranger pour remplir les obligations de la formation d'ingénieur.
+						Suite à la pandémie de Covid 19, les obligations de mobilité à l'étranger ont dû
+						être supprimées. Pour bénéficier de plus d'expérience professionnelle,
+						j'ai pu à nouveau rejoindre l'équipe technique de SWPL et leur prêter main forte.`,
+						company: Companies.SWPL,
+						interests: [
+							"Compétences connexes diverses",
+							"Connaissance de l'écosystème du monde du web",
+							"Connaissance des technologies utilisées",
+							"Organisation",
+							"Capacité d'adaptation",
+							"Travail en équipe",
+							"Autonomie",
+						],
+					},
+					{
 						timeSpan: "Novembre 2019 - Mai 2020",
 						title: "Projet transversal : mon-taraud.com",
 						description: `Dans le cadre de la seconde année du
@@ -47,7 +67,7 @@
 						Au sein d'une équipe de 3 étudiants, j'ai occupé le
 						rôle de directeur technique. J'ai pu notamment définir
 						un état de l'art des technologies pertinentes à la
-						réalisation du projet&nbsp;;&nbsp; État de l'art qui a
+						réalisation du projet&nbsp;&nbsp; État de l'art qui a
 						servi notamment à déterminer les technologies à utiliser
 						et ce en prenant en compte les affinités des membres de
 						l'équipe pour cesdites technologies.`,

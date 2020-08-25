@@ -3,7 +3,7 @@
 		Je suis pianiste depuis l'âge de 7 ans. J'ai commencé en prenant des cours à
 		<ExternalLink href="https://www.orvault.fr/culture-sport-tourisme/culture/musiques/origami-ecole-municipale-des-musiques-dorvault">
 			l'école de musique d'Orvault.
-		</ExternalLink>J'ai été l'élève de
+		</ExternalLink>J'ai ainsi été l'élève de
 		<ExternalLink href="https://www.guychazelle-piano.fr/">
 			Guy Chazelle
 		</ExternalLink>pendant 6 ans avant d'arrêter ma formation pour mieux
@@ -30,8 +30,8 @@
 		de la discipline, de l'assiduité et de la maîtrise de soi ; elle
 		entraîne également le fait d'être plus exigeant envers soi-même.<br/>
 		<br/>
-		
-		Depuis l'adolescence, et encore plus  après ma découverte des
+
+		Depuis l'adolescence, et encore plus après ma découverte des
 		<ExternalLink href="https://fr.wikipedia.org/wiki/Sciences_de_l%27ing%C3%A9nieur">
 			sciences de l'ingénieur
 		</ExternalLink> au lycée, j'ai un intérêt et une fascination toute
@@ -39,7 +39,7 @@
 		l'informatique, cette fascination n'a cessé de croître. Que ce soit des
 		composants électroniques ou des nouveautés en terme d'ingénierie, j'apprécie
 		tout particulièrement ce qui touche à la robotique et la mécanique en général,
-		notamment dans le cadre de la 
+		notamment dans le cadre de la
 		<ExternalLink href="https://fr.wikipedia.org/wiki/Principe_fondamental_de_la_statique">
 			statique
 		</ExternalLink>ou de la
@@ -57,12 +57,12 @@
 		En plus de la pratique de la musique, j'apprécie tout particulièrement
 		son écoute et son analyse (en utilisant mes restes de solfège). Je n'ai
 		pas de style ou d'artistes favoris, je tombe généralement sur une oeuvre
-		que j'apprécie en tant que tel. Il m'arrive parfois, tel un professeur de
-		français au lycée, de rêvasser à des significations quelconques qu'elles
-		proviennent du texte ou de la structure musicale en elle-même.
-		J'ai une appréiation toute particulière pour les arrangements orchestraux,
-		certains sous-genres electro et les musiques contemporaines suivant des
-		structures classiques.<br/>
+		que j'apprécie en tant que tel et pas au sein d'un ensemble.
+		Il m'arrive parfois, tel un professeur de français au lycée, de rêvasser
+		à des significations quelconques qu'elles proviennent du texte ou de la
+		structure musicale en elle-même. J'ai une appréiation toute particulière
+		pour les arrangements orchestraux, certains sous-genres electro et les musiques
+		contemporaines suivant des structures classiques.<br/>
 		<br/>
 
 		Pendant mes études, j'ai développé un amour notable pour le monde de
@@ -72,10 +72,10 @@
 		</ExternalLink>depuis mes premiers pas
 		en programmation, généralement pour résoudre des problèmes récurrents
 		que je peux rencontrer. Je crois en une informatique libre, ouverte et
-		gratuite où le profit et la visibilité seraient fait sur la composition et les réalisations
-		logicielles plutôt que sur leurs composants. Cela permettrait une meilleure
-		apréhension, une forme d'uniformisation des ressources et sûrement un
-		climat plus sain dans le milieu.
+		gratuite où le profit et la visibilité seraient construits sur la composition
+		et les réalisations logicielles plutôt que sur leurs composants individuels.
+		Cela permettrait une meilleure apréhension, une forme d'uniformisation des ressources
+		et sûrement un climat plus sain dans le milieu.
 	</a-card>
 </template>
 
