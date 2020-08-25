@@ -14,7 +14,7 @@
 							</transition>
 						</keep-alive>
 					</a-col>
-					
+
 					<a-back-top style="right: 3%; bottom: 3%;">
 						<a-button type="primary" shape="circle" size="large">
 							<a-icon type="up"/>
@@ -25,7 +25,7 @@
 
 			<a-layout-footer class="footer">
 				<p class="foot">
-					<span>Ludwig GUERIN &copy;2020</span>
+					<span>Ludwig GUERIN &copy;<span v-html="copyrightYear"></span></span>
 					<GdprOpener class="opener" :gdpr="$refs.gdpr"/>
 					<router-link :to="{name: 'About'}">
 						Mentions légales
@@ -44,6 +44,7 @@
 	import GdprBanner from "@/components/GdprBanner"
 	import GdprOpener from "@/components/GdprOpener"
 	import Navbar from "@/components/Navbar"
+	import moment from "moment"
 
 	const defaultTransition = "fade";
 
@@ -51,6 +52,7 @@
 		data(){
 			return {
 				transitionName: defaultTransition,
+				currentYear: moment().format("YYYY"),
 			};
 		},
 		created(){
@@ -98,7 +100,7 @@
 					},
 					{
 						property: "twitter:image",
-						content: logo, 
+						content: logo,
 					},
 
 					//dynamic
@@ -131,6 +133,13 @@
 			GdprOpener,
 			Navbar,
 		},
+		computed: {
+			copyrightYear(){
+				return parseInt(this.currentYear, 10) > 2020
+				? `2020&nbsp-&nbsp;${this.currentYear}`
+				: this.currentYear;
+			},
+		},
 	}
 </script>
 
@@ -149,7 +158,7 @@
 		width: 100%;
 		height: 100vh;
 	}
-	
+
 	.main{
 		min-height: 100vh !important;
 	}
@@ -158,7 +167,7 @@
 		min-height: 100%;
 		width: 100%;
 	}
-	
+
 	.foot{
 		display: flex;
 		justify-content: center;
@@ -174,14 +183,14 @@
 			}
 		}
 	}
-	
+
 	.footer{
 		text-align: center;
 		padding: 0 1em !important;
 
 		padding-top: 1em !important;
 	}
-	
+
 	/*.opener{
 		margin-left: 1em;
 	}*/
@@ -218,7 +227,7 @@
 	}
 
 	.fade-enter,
-	.fade-leave-active{ 
+	.fade-leave-active{
 		opacity: 0
 	}
 </style>
