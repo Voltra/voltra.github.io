@@ -48,7 +48,7 @@
 </template>
 
 <script>
-	import { makeMeta } from "@/plugins/meta"	
+	import { makeMeta } from "@/plugins/metaHelpers"	
 
 	const placement = "bottomRight";
 	const title = "Accueil";

@@ -1,6 +1,8 @@
 const path = require("path");
 const CopyPlugin = require("copy-webpack-plugin");
-const { asSequence } = require("sequency");
+const {
+	asSequence
+} = require("sequency");
 
 const here = (uri = "") => path.resolve(__dirname, uri);
 const primary = "#0087B3";
@@ -9,6 +11,14 @@ const favicon = "favicon.ico";
 module.exports = {
 	outputDir: here("docs"),
 	filenameHashing: false,
+	pluginOptions: {
+		meta: {
+			projectName: "Ludwig GUERIN",
+			url: "https://ludwigguerin.fr",
+			description: "Je m'appelle Ludwig GUERIN et je suis un développeur front-end.",
+			socialImage: "img/og.png",
+		}
+	},
 	pwa: {
 		name: "Ludwig GUERIN - Voltra the dev",
 		themeColor: primary,

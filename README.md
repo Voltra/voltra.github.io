@@ -13,6 +13,6 @@
 	* [x] Tags
 * [x] Add components
   * [x] github repo details
-  * [ ] internships (and previous work experience) details
+  * [x] internships (and previous work experience) details
   * [x] contact
   * [ ] blog system *[optional]*
