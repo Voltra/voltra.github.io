@@ -33,7 +33,7 @@
 
 <script>
 	import ExternalLink from "@/components/ExternalLink"
-	import { makeMeta } from "@/plugins/meta"	
+	import { makeMeta } from "@/plugins/metaHelpers"	
 
 	const placement = "bottomRight";
 

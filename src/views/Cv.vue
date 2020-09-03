@@ -32,7 +32,7 @@
 	import PastExperiences from "@/components/PastExperiences"
 	import Skills from "@/components/Skills"
 	import Interests from "@/components/Interests"
-	import { makeMeta } from "@/plugins/meta"
+	import { makeMeta } from "@/plugins/metaHelpers"
 
 	const placement = "bottomRight";
 	const title = "CV en ligne";

@@ -9,6 +9,14 @@ const favicon = "favicon.ico";
 module.exports = {
 	outputDir: here("docs"),
 	filenameHashing: false,
+	pluginOptions: {
+		meta: {
+			projectName: "Ludwig GUERIN",
+			url: "https://ludwigguerin.fr",
+			description: "Je m'appelle Ludwig GUERIN et je suis un développeur front-end.",
+			socialImage: "/img/og.png",
+		}
+	},
 	pwa: {
 		name: "Ludwig GUERIN - Voltra the dev",
 		themeColor: primary,
@@ -43,8 +51,8 @@ module.exports = {
 					"autoprefixer",
 					"cssnano",
 				]).map(plugin => require(plugin))
-					.map(factory => factory())
-					.toArray(),
+				.map(factory => factory())
+				.toArray(),
 			},
 		},
 	},
