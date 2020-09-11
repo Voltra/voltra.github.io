@@ -4,7 +4,7 @@
 			<img
 				slot="cover"
 				class="project__cover"
-				alt="Image de couvertue"
+				alt="Image de couverture"
 				:src="coverUrl"/>
 
 			<a-card-meta :title="project.title">
@@ -45,7 +45,7 @@
 				if(typeof this.project.cover === "string")
 					return this.project.cover.replace("{{ repo }}", this.url);
 
-				return "/img/og.png";
+				return `/${process.env.VUE_APP_OG_IMAGE_URI}`;
 			},
 		},
 	}

@@ -1,7 +1,7 @@
 <template>
 	<a-row type="flex" justify="center" align="middle" :gutter="[16, 16]">
 		<a-col :xs="10" :lg="4" class="intro__avatar">
-			<a-avatar src="/img/ludwig.png" alt="photo" :size="128"/>
+			<a-avatar src="/img/ludwig.jpg" alt="photo" :size="128"/>
 		</a-col>
 
 		<a-col :xs="11" :lg="8">

@@ -5,7 +5,7 @@
 
 		<a-row type="flex" justify="center" align="middle">
 			<a-col :xs="8" :lg="4" style="text-align: center">
-				<a-avatar src="/img/ludwig.png" alt="Photo" :size="128"/>
+				<a-avatar src="/img/ludwig.jpg" alt="Photo" :size="128"/>
 			</a-col>
 
 			<a-col :xs="10" :lg="8" style="text-align: justify">
