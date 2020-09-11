@@ -44,7 +44,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/voltra.png"
   },
   {
-    "revision": "6c6094dc95b755e3365f7d26237134ab",
+    "revision": "3d13dde1e8b2b8ad99d64169e4f7586e",
     "url": "/index.html"
   },
   {
