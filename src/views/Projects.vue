@@ -62,7 +62,7 @@
 				projects: [
 					{
 						type: "github",
-						cover: "/img/og.png",
+						cover: `/${process.env.VUE_APP_OG_IMAGE_URI}`,
 						repo: "voltra.github.io",
 						title: "Site officiel",
 						description: `Site statique de Ludwig GUERIN, aka <em>"Voltra the dev"</em>.
