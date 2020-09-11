@@ -65,6 +65,10 @@ module.exports = {
 			expand: true, // ensure variables are fully expanded
 		}));
 	},
+	chainWebpack(config){
+		config.plugins.delete("prefetch");
+		config.plugin("preload");
+	},
 	css: {
 		//		requireModuleExtension: false,
 		loaderOptions: {

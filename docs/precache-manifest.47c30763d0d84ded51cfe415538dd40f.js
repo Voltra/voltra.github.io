@@ -8,27 +8,27 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/browserconfig.xml"
   },
   {
-    "revision": "3d5e3029438fde4a3edc",
+    "revision": "596dbff7beafd717e650",
     "url": "/css/app.css"
   },
   {
-    "revision": "014e36e0b97341cf223f",
+    "revision": "1c01b7452fc5aeddaf16",
     "url": "/css/chunk-136097bf.css"
   },
   {
-    "revision": "f18a388ba4d13f0d5b70",
+    "revision": "f00c0ebe6859d3c9b0cb",
     "url": "/css/chunk-14eed3ac.css"
   },
   {
-    "revision": "2f82abb69e463655aa3e",
+    "revision": "a9018d1f579827114cfc",
     "url": "/css/chunk-6461f60b.css"
   },
   {
-    "revision": "0c10f284d3410e38da90",
+    "revision": "b26cb630c9842a3ff4e8",
     "url": "/css/chunk-68d61c20.css"
   },
   {
-    "revision": "6685d50efc45d47af746",
+    "revision": "4661d37c1cda0d065c98",
     "url": "/css/chunk-893b923e.css"
   },
   {
@@ -52,35 +52,35 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/voltra.png"
   },
   {
-    "revision": "e87c501afe2af8912790aa99f316cd2c",
+    "revision": "abb0025fc4eec43eefb0fae0a73352f2",
     "url": "/index.html"
   },
   {
-    "revision": "3d5e3029438fde4a3edc",
+    "revision": "596dbff7beafd717e650",
     "url": "/js/app.js"
   },
   {
-    "revision": "014e36e0b97341cf223f",
+    "revision": "1c01b7452fc5aeddaf16",
     "url": "/js/chunk-136097bf.js"
   },
   {
-    "revision": "f18a388ba4d13f0d5b70",
+    "revision": "f00c0ebe6859d3c9b0cb",
     "url": "/js/chunk-14eed3ac.js"
   },
   {
-    "revision": "7892676e93e841787892",
+    "revision": "a23a55300142b99b9fb5",
     "url": "/js/chunk-2d0e95df.js"
   },
   {
-    "revision": "2f82abb69e463655aa3e",
+    "revision": "a9018d1f579827114cfc",
     "url": "/js/chunk-6461f60b.js"
   },
   {
-    "revision": "0c10f284d3410e38da90",
+    "revision": "b26cb630c9842a3ff4e8",
     "url": "/js/chunk-68d61c20.js"
   },
   {
-    "revision": "6685d50efc45d47af746",
+    "revision": "4661d37c1cda0d065c98",
     "url": "/js/chunk-893b923e.js"
   },
   {
