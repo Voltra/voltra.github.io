@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/browserconfig.xml"
   },
   {
-    "revision": "2f3d25cff95a8f3eaa62",
+    "revision": "4681fcd5c16b07f7b9e2",
     "url": "/css/app.css"
   },
   {
@@ -44,11 +44,11 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/voltra.png"
   },
   {
-    "revision": "250900feaef12decf586cf40282e7ef8",
+    "revision": "6c6094dc95b755e3365f7d26237134ab",
     "url": "/index.html"
   },
   {
-    "revision": "2f3d25cff95a8f3eaa62",
+    "revision": "4681fcd5c16b07f7b9e2",
     "url": "/js/app.js"
   },
   {
@@ -76,7 +76,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/js/chunk-a6e08418.js"
   },
   {
-    "revision": "598177100773ce559670",
+    "revision": "53d3490914ed49957469",
     "url": "/js/chunk-vendors.js"
   },
   {
