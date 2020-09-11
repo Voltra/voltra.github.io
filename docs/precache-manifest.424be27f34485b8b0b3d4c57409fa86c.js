@@ -8,27 +8,27 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/browserconfig.xml"
   },
   {
-    "revision": "1ee2cc3964edf110d38c",
+    "revision": "2f3d25cff95a8f3eaa62",
     "url": "/css/app.css"
   },
   {
-    "revision": "e4df6c0e23efbfce6650",
+    "revision": "6aacdfac1cc7f27be4f8",
     "url": "/css/chunk-0e6fa235.css"
   },
   {
-    "revision": "9a11491fa91de608bfdf",
+    "revision": "f18a388ba4d13f0d5b70",
     "url": "/css/chunk-14eed3ac.css"
   },
   {
-    "revision": "bcbbf9fd3775eb5ae21d",
+    "revision": "2f82abb69e463655aa3e",
     "url": "/css/chunk-6461f60b.css"
   },
   {
-    "revision": "0aeb81436503830e5927",
+    "revision": "a59866a02a5755510464",
     "url": "/css/chunk-68a5ee05.css"
   },
   {
-    "revision": "267ff1ce875219190b74",
+    "revision": "fecd2c975efb1576e495",
     "url": "/css/chunk-a6e08418.css"
   },
   {
@@ -44,39 +44,39 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/voltra.png"
   },
   {
-    "revision": "74b26e38bf05151a15d9d6b7e943114d",
+    "revision": "250900feaef12decf586cf40282e7ef8",
     "url": "/index.html"
   },
   {
-    "revision": "1ee2cc3964edf110d38c",
+    "revision": "2f3d25cff95a8f3eaa62",
     "url": "/js/app.js"
   },
   {
-    "revision": "e4df6c0e23efbfce6650",
+    "revision": "6aacdfac1cc7f27be4f8",
     "url": "/js/chunk-0e6fa235.js"
   },
   {
-    "revision": "9a11491fa91de608bfdf",
+    "revision": "f18a388ba4d13f0d5b70",
     "url": "/js/chunk-14eed3ac.js"
   },
   {
-    "revision": "f3bc522fa984ec85c9b8",
+    "revision": "7892676e93e841787892",
     "url": "/js/chunk-2d0e95df.js"
   },
   {
-    "revision": "bcbbf9fd3775eb5ae21d",
+    "revision": "2f82abb69e463655aa3e",
     "url": "/js/chunk-6461f60b.js"
   },
   {
-    "revision": "0aeb81436503830e5927",
+    "revision": "a59866a02a5755510464",
     "url": "/js/chunk-68a5ee05.js"
   },
   {
-    "revision": "267ff1ce875219190b74",
+    "revision": "fecd2c975efb1576e495",
     "url": "/js/chunk-a6e08418.js"
   },
   {
-    "revision": "9e32a83a4e8cd8ada8b5",
+    "revision": "64b3e2b3fefa5260517c",
     "url": "/js/chunk-vendors.js"
   },
   {

@@ -11,7 +11,7 @@
 	* [x] OG images
 	* [x] Descriptions
 	* [x] Tags
-	* [ ] Sitemap
+	* [x] Sitemap
 * [x] Add components
   * [x] github repo details
   * [x] internships (and previous work experience) details
