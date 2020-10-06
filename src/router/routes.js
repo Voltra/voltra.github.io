@@ -58,7 +58,7 @@ Route.view("/contact", "Contact").name("Contact").options({
 		},
 		sitemap: {
 			loc: url("/contact"),
-			lastmod: "2020-09-11",
+			lastmod: "2020-10-06",
 			priority: 0.7,
 		},
 	},
