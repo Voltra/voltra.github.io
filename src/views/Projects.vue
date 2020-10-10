@@ -4,8 +4,7 @@
 			<a-col
 	  			v-for="project in pageProjects"
 			   	:key="project.title"
-			   	:xs="11"
-   				:md="6"
+			   	:xs="12"
 			  	:xl="4"
    				class="project">
 					<keep-alive>
@@ -16,9 +15,9 @@
 					</keep-alive>
 			</a-col>
 
-			<a-col :span="11" v-if="projects.length > pageSize">
+			<a-col :span="12" v-if="projects.length > pageSize">
 				<a-pagination
-	   				class="project__paginator"
+          			class="project__paginator"
 					v-model="page"
 					:total="projects.length"
 					:pageSize="pageSize"/>
@@ -139,6 +138,23 @@
 						À noter qu'il existe divers outils permettant l'intégration de la
 						bibliothèque avec d'autres technologies (e.g. frameworks front-end).`,
 					},
+          {
+            type: "github",
+            repo: "lightquery",
+            cover: "{{ repo }}/raw/master/logo/logo.png",
+            title: "Lightquery",
+            description: `Mon premier projet Open Source, une alternative
+            plus légère et plus moderne à jQuery.`,
+          },
+          {
+            type: "github",
+            repo: "lazy-collection",
+            cover: "{{ repo }}/raw/master/res/lazy-collection.png",
+            title: "Lazy collection",
+            description: `Bibliothèque de manipulation de collections en PHP favorisant
+            l'expressivité tout en gardant une complexité linéaire indépendamment
+            du nombre d'opérations.`,
+          },
 				],
 			};
 		},

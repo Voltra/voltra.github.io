@@ -59,6 +59,7 @@
 			height: auto;
 			max-height: 200px;
 			margin: 0 auto;
+      	//object-fit: cover;
 		}
 	}
 </style>

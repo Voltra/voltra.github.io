@@ -7,7 +7,7 @@
 				alt="Image de couverture"
 				:src="coverUrl"/>
 
-			<a-card-meta :title="project.title"> 
+			<a-card-meta :title="project.title">
 				<p style="text-align: justify;" slot="description" v-html="project.description">
 				</p>
 			</a-card-meta>
@@ -20,7 +20,7 @@
 				align="middle">
 				<a-col
 					v-for="extra in project.extras"
-	 				:key="extra.name"> 
+	 				:key="extra.name">
 					<a-button
    						type="primary">
 						<ExternalLink :href="extra.url" type="secondary">
@@ -78,6 +78,8 @@
 			height: auto;
 			max-height: 200px;
 			margin: 0 auto;
+
+      //object-fit: cover;
 		}
 	}
 </style>
