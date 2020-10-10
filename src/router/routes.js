@@ -30,7 +30,7 @@ Route.view("/projets", "Projects").name("Projects").options({
 		},
 		sitemap: {
 			loc: url("/projets"),
-			lastmod: "2020-09-11",
+			lastmod: "2020-10-10",
 			priority: 0.8,
 		},
 	},
