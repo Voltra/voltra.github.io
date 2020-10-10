@@ -4,8 +4,7 @@
 			<a-col
 	  			v-for="project in pageProjects"
 			   	:key="project.title"
-			   	:xs="11"
-   				:md="6"
+			   	:xs="12"
 			  	:xl="4"
    				class="project">
 					<keep-alive>
@@ -16,9 +15,9 @@
 					</keep-alive>
 			</a-col>
 
-			<a-col :span="11" v-if="projects.length > pageSize">
+			<a-col :span="12" v-if="projects.length > pageSize">
 				<a-pagination
-	   				class="project__paginator"
+          			class="project__paginator"
 					v-model="page"
 					:total="projects.length"
 					:pageSize="pageSize"/>

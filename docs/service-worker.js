@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.c1d7b82a558059a983971cd63f8c81db.js"
+  "/precache-manifest.73a83901e620b41f57940bb080c3e9b8.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "voltra.github.io"});
