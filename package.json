@@ -8,6 +8,7 @@
 		"sitemap": "vue-cli-service sitemap"
 	},
 	"dependencies": {
+		"@hscmap/vue-window": "^2.4.2",
 		"@octokit/rest": "^17.10.0",
 		"@voltra/json": "^3.0.1",
 		"ant-design-vue": "^1.2.4",
@@ -22,6 +23,7 @@
 		"vue-clipboard2": "^0.3.1",
 		"vue-flip-toolkit": "^1.6.0",
 		"vue-gdpr-guard": "^1.0.2",
+		"vue-konami": "^1.1.0",
 		"vue-meta": "^2.3.4",
 		"vue-router": "^3.2.0",
 		"vue-routisan": "^2.1.4",

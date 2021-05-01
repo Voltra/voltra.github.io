@@ -18,3 +18,13 @@ $accent: $ternary;
 $info: #0c549b;
 $error: #B62222;
 $warning: #E9D30F;
+
+:export {
+	primary: $primary;
+	secondary: $secondary;
+	ternary: $ternary;
+	accent: $accent;
+	info: $info;
+	error: $error;
+	warning: $warning;
+}

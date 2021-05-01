@@ -16,7 +16,7 @@ Route.view("/", "Home").name("Home").options({
 		},
 		sitemap: {
 			loc: url("/"),
-			lastmod: "2020-09-11",
+			lastmod: "2021-05-01",
 			priority: 1,
 		},
 	},
@@ -30,7 +30,7 @@ Route.view("/projets", "Projects").name("Projects").options({
 		},
 		sitemap: {
 			loc: url("/projets"),
-			lastmod: "2020-10-10",
+			lastmod: "2021-05-01",
 			priority: 0.8,
 		},
 	},
@@ -44,7 +44,7 @@ Route.view("/cv", "Cv").name("Cv").options({
 		},
 		sitemap: {
 			loc: url("/cv"),
-			lastmod: "2020-09-11",
+			lastmod: "2021-05-01",
 			priority: 0.9,
 		},
 	},
@@ -58,7 +58,7 @@ Route.view("/contact", "Contact").name("Contact").options({
 		},
 		sitemap: {
 			loc: url("/contact"),
-			lastmod: "2020-10-06",
+			lastmod: "2021-05-01",
 			priority: 0.7,
 		},
 	},
@@ -68,7 +68,7 @@ Route.view("/mentions-legales", "About").name("About").options({
 	meta: {
 		sitemap: {
 			loc: url("/mentions-legales"),
-			lastmod: "2020-09-11",
+			lastmod: "2021-05-01",
 			priority: 0.1,
 		},
 	},
