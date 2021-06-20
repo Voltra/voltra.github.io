@@ -12,7 +12,7 @@
 					@close="closeFloatingPlayer"/>
 
 				<a-row class="container" type="flex" justify="center" align="middle">
-					<a-col style="position: relative" :xs="11" :lg="9"> <!-- :md="10" :xl="6" -->
+					<a-col style="position: relative" :xs="11" :lg="9" :xl="8"> <!-- :md="10" :xl="6" -->
 						<keep-alive>
 							<transition class="router" :name="transitionName" mode="out-in">
 								<router-view/>

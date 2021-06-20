@@ -4,7 +4,10 @@
 			<a-col
 	  			v-for="project in pageProjects"
 			   	:key="project.title"
-			   	:xs="12"
+			   	:xs="11"
+				:sm="8"
+				:md="6"
+				:lg="6"
 			  	:xl="4"
    				class="project">
 					<keep-alive>
@@ -138,23 +141,23 @@
 						À noter qu'il existe divers outils permettant l'intégration de la
 						bibliothèque avec d'autres technologies (e.g. frameworks front-end).`,
 					},
-          {
-            type: "github",
-            repo: "lightquery",
-            cover: "{{ repo }}/raw/master/logo/logo.png",
-            title: "Lightquery",
-            description: `Mon premier projet Open Source, une alternative
-            plus légère et plus moderne à jQuery.`,
-          },
-          {
-            type: "github",
-            repo: "lazy-collection",
-            cover: "{{ repo }}/raw/master/res/lazy-collection.png",
-            title: "Lazy collection",
-            description: `Bibliothèque de manipulation de collections en PHP favorisant
-            l'expressivité tout en gardant une complexité linéaire indépendamment
-            du nombre d'opérations.`,
-          },
+					{
+						type: "github",
+						repo: "lightquery",
+						cover: "{{ repo }}/raw/master/logo/logo.png",
+						title: "Lightquery",
+						description: `Mon premier projet Open Source, une alternative
+						plus légère et plus moderne à jQuery.`,
+					},
+					{
+						type: "github",
+						repo: "lazy-collection",
+						cover: "{{ repo }}/raw/master/res/lazy-collection.png",
+						title: "Lazy collection",
+						description: `Bibliothèque de manipulation de collections en PHP favorisant
+						l'expressivité tout en gardant une complexité linéaire indépendamment
+						du nombre d'opérations.`,
+					},
 				],
 			};
 		},

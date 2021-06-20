@@ -4,7 +4,7 @@
 			<a-avatar src="/img/ludwig.jpg" alt="photo" :size="128"/>
 		</a-col>
 
-		<a-col :xs="11" :lg="8">
+		<a-col :xs="12" :lg="8">
 			<a-card :bordered="false" title="Ludwig GUERIN, Nantes">
 				Passionné du monde du web, j'aime mettre à profit les dernières
 				technologies afin de mettre en place des applications uniques
