@@ -17,3 +17,4 @@
   * [x] internships (and previous work experience) details
   * [x] contact
   * [ ] blog system *[optional]*
+* [ ] loader

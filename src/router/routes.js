@@ -1,4 +1,5 @@
 const Route = require("vue-routisan").default;
+const { stopLoader } = require("../utils");
 
 const url = (uri = "") => `/#${uri}`;
 
@@ -8,78 +9,90 @@ Route.setViewResolver(uri => {
 	: uri;
 });
 
-Route.view("/", "Home").name("Home").options({
-	meta: {
-		nav: {
-			title: "Accueil",
-			icon: "home",
-		},
-		sitemap: {
-			loc: url("/"),
-			lastmod: "2021-09-08",
-			priority: 1,
-		},
-	},
-});
+let visited = false;
+const beforeEnter = (to, from, next) => {
+	next();
 
-Route.view("/projets", "Projects").name("Projects").options({
-	meta: {
-		nav: {
-			title: "Projets",
-			icon: "project", // code
-		},
-		sitemap: {
-			loc: url("/projets"),
-			lastmod: "2021-09-08",
-			priority: 0.8,
-		},
-	},
-});
+	if(!visited){
+		stopLoader();
+		visited = true;
+	}
+};
 
-Route.view("/cv", "Cv").name("Cv").options({
-	meta: {
-		nav: {
-			title: "CV",
-			icon: "file-text",
+Route.group({ beforeEnter }, () => {
+	Route.view("/", "Home").name("Home").options({
+		meta: {
+			nav: {
+				title: "Accueil",
+				icon: "home",
+			},
+			sitemap: {
+				loc: url("/"),
+				lastmod: "2021-09-08",
+				priority: 1,
+			},
 		},
-		sitemap: {
-			loc: url("/cv"),
-			lastmod: "2021-09-08",
-			priority: 0.9,
-		},
-	},
-});
+	});
 
-Route.view("/contact", "Contact").name("Contact").options({
-	meta: {
-		nav: {
-			title: "Me Contacter",
-			icon: "notification",
+	Route.view("/projets", "Projects").name("Projects").options({
+		meta: {
+			nav: {
+				title: "Projets",
+				icon: "project", // code
+			},
+			sitemap: {
+				loc: url("/projets"),
+				lastmod: "2021-09-08",
+				priority: 0.8,
+			},
 		},
-		sitemap: {
-			loc: url("/contact"),
-			lastmod: "2021-09-08",
-			priority: 0.7,
-		},
-	},
-});
+	});
 
-Route.view("/mentions-legales", "About").name("About").options({
-	meta: {
-		sitemap: {
-			loc: url("/mentions-legales"),
-			lastmod: "2021-09-08",
-			priority: 0.1,
+	Route.view("/cv", "Cv").name("Cv").options({
+		meta: {
+			nav: {
+				title: "CV",
+				icon: "file-text",
+			},
+			sitemap: {
+				loc: url("/cv"),
+				lastmod: "2021-09-08",
+				priority: 0.9,
+			},
 		},
-	},
-});
+	});
 
-Route.view("*", "404").name("404").options({
-	meta: {
-		sitemap: {
-			ignoreRoute: true,
+	Route.view("/contact", "Contact").name("Contact").options({
+		meta: {
+			nav: {
+				title: "Me Contacter",
+				icon: "notification",
+			},
+			sitemap: {
+				loc: url("/contact"),
+				lastmod: "2021-09-08",
+				priority: 0.7,
+			},
 		},
-	},
+	});
+
+	Route.view("/mentions-legales", "About").name("About").options({
+		meta: {
+			sitemap: {
+				loc: url("/mentions-legales"),
+				lastmod: "2021-09-08",
+				priority: 0.1,
+			},
+		},
+	});
+
+	Route.view("*", "404").name("404").options({
+		meta: {
+			sitemap: {
+				ignoreRoute: true,
+			},
+		},
+	});
 });
 
 /**
