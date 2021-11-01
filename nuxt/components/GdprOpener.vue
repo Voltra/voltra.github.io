@@ -11,7 +11,7 @@
 	</a-button>
 </template>
 
-<script>	
+<script>
 	export default {
 		props: ["gdpr"],
 	}

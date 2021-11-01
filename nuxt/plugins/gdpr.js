@@ -2,6 +2,7 @@ import Vue from "vue";
 import { VueGdprGuard } from "vue-gdpr-guard/dist/vue-gdpr-guard.common";
 import { GdprManagerBuilder, GdprDeserializer, GdprStorage } from "gdpr-guard";
 import moment from "moment";
+import { defaults, LocalStorageSavior } from "gdpr-guard-local";
 
 const storeKey = "gdpr";
 const versionKey = `${storeKey}__version`;
@@ -9,6 +10,14 @@ const version = "3.1.0";
 
 //GDPR says max 13 months
 const expiration = () => moment().startOf("month").add(13, "months").toDate();
+
+
+const config = defaults.makeConfig({
+  version,
+  versionKey,
+  storeKey,
+  expiration,
+});
 
 const factory = () => {
   return GdprManagerBuilder.make()
@@ -19,7 +28,7 @@ const factory = () => {
     .build();
 };
 
-const updateSharedManager = (Vue, manager) => {
+/* const updateSharedManager = (Vue, manager) => {
   //Vue.nextTick(() => {
   if ("$gdpr" in Vue.prototype) {
     const { $gdpr } = Vue.prototype;
@@ -94,14 +103,30 @@ const restoreOrCreate = (Vue, factory) => {
   }
 
   return restored;
-};
+}; */
 
-const manager = restoreOrCreate(Vue, factory);
-Vue.use(VueGdprGuard, { manager });
+const savior = new LocalStorageSavior(config, () => ({
+  async has(key) {
+    return Vue.$localStorage.has(key);
+  },
+  async set(key, value, expiration) {
+    Vue.$localStorage.set(key, value, expiration);
+  },
+  async remove(key) {
+    Vue.$localStorage.remove(key);
+  },
+  async get(key) {
+    return Vue.$localStorage.get(key);
+  },
+  async removeExpiredKeys() {
+    Vue.$localStorage.removeExpiredKeys();
+  }
+}));
+Vue.use(VueGdprGuard, { savior, factory });
 
 [Vue, Vue.prototype].forEach(target => {
   Object.defineProperties(target, {
-    $gdpr_serde: {
+    /* $gdpr_serde: {
       get() {
         return {
           restore(...args) { return restore(Vue, ...args); },
@@ -117,7 +142,7 @@ Vue.use(VueGdprGuard, { manager });
           },
         };
       }
-    },
+    }, */
     $gdprStorageToString: {
       get() {
         return storage => {

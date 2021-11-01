@@ -3,7 +3,7 @@
         <GdprManager>
             <a-card class="gdpr" slot-scope="{ manager, groups, toggleManager }" title="Règlement sur la Gestion et la Protection des Données personnelles">
 				<a-switch slot="extra" class="gdpr__switch" :checked="manager.enabled" @change="toggleManager"/>
-				
+
 				<a-button-group class="gdpr__ables">
 					<a-button type="error" class="primary gdpr__able" @click="disableAll">Tout refuser</a-button>
 					<a-button type="primary" class="primary gdpr__able" @click="enableAll">Tout accepter</a-button>
@@ -11,9 +11,9 @@
 
                 <GdprGroup v-for="group in groups" :key="group.name" :group="group">
                     <a-card class="gdpr__group" slot-scope="{ guards, toggleGroup }" :title="group.name">
-						<a-switch v-if="guards.length > 1" slot="extra" class="gdpr__switch" 
+						<a-switch v-if="guards.length > 1" slot="extra" class="gdpr__switch"
 							:disabled="group.required" :checked="group.enabled" @change="toggleGroup"/>
-						
+
 						<p class="gdpr__description">
 							{{ group.description }}
 						</p>
@@ -26,7 +26,7 @@
 
 								<p class="gdpr__description">{{ guard.description }}</p>
 
-								<a-switch v-if="guards.length > 1" slot="extra" class="gdpr__switch" 
+								<a-switch v-if="guards.length > 1" slot="extra" class="gdpr__switch"
 						:disabled="guard.required" :checked="guard.enabled" @change="toggleGuard"/>
                             </a-card>
                         </GdprGuard>
@@ -39,11 +39,15 @@
 
 <script>
 	import VueTypes from "vue-types"
-	import { GdprManager, GdprGroup, GdprGuard } from "vue-gdpr-guard"
-	
+	// import { GdprManager, GdprGroup, GdprGuard } from "vue-gdpr-guard"
+	import GdprManager from "vue-gdpr-guard/src/components/GdprManager.vue"
+	import GdprGroup from "vue-gdpr-guard/src/components/GdprGroup.vue"
+	import GdprGuard from "vue-gdpr-guard/src/components/GdprGuard.vue"
+
 	const placement = "bottomRight";
 
 	export default {
+    ssr: false,
 		components: {
 			GdprManager,
 			GdprGroup,
@@ -64,7 +68,7 @@
 				this.$emit("close");
 			},
 			discard(){
-				const didStore = this.$gdpr_serde.storeIfNotExists(this.$gdpr.raw());
+				const didStore = this.$gdpr_savior.storeIfNotExists(this.$gdpr.raw());
 
 				if(didStore)
 					this.$notification.info({
@@ -80,18 +84,18 @@
 				this.close();
 			},
 			save(){
-				const didStore = this.$gdpr_serde.store(this.$gdpr.raw());
+				const didStore = this.$gdpr_savior.store(this.$gdpr.raw());
 
-                if(didStore)
-                    this.$notification.success({
-						message: "Nous avons sauvegardé vos préférences",
-						placement,
-					});
-                else
-                    this.$notification.error({
-						message: "Nous n'avons pas réussi à sauvegarder vos préférences",
-						placement,
-					});
+          if(didStore)
+            this.$notification.success({
+              message: "Nous avons sauvegardé vos préférences",
+              placement,
+            });
+          else
+            this.$notification.error({
+              message: "Nous n'avons pas réussi à sauvegarder vos préférences",
+              placement,
+            });
 
 				this.close();
 			},
@@ -106,18 +110,18 @@
 				width: 95% !important;
 			}
 		}
-		
+
 		&__ables{
 			display: block !important;
 			margin-bottom: 1em;
 			text-align: center;
 		}
-		
+
 		&__storage{
 			font-size: 0.8em;
 			font-style: italic;
 		}
-		
+
 		&__group, &__item{
 			& + &{
 				margin-top: 1em;

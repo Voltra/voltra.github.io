@@ -28,6 +28,11 @@ export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
+  generate: {
+    dir: "docs",
+    subFolders: false,
+  },
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'voltra.github.io',
@@ -50,6 +55,9 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     '@/plugins/antd-ui',
+    '@/plugins/clipboard',
+    '@/plugins/localStorage',
+    '@/plugins/json',
     { src: "@/plugins/gdpr", mode: "client", },
   ],
 
@@ -64,6 +72,7 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+    '@nuxtjs/sitemap',
   ],
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa

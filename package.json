@@ -12,6 +12,7 @@
 		"@voltra/json": "^3.0.1",
 		"ant-design-vue": "^1.2.4",
 		"core-js": "^3.6.5",
+		"gdpr-guard-local": "^1.0.0",
 		"hamburgers": "^1.1.3",
 		"moment": "^2.26.0",
 		"register-service-worker": "^1.7.1",

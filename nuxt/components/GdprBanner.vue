@@ -41,7 +41,7 @@
 		},
 		data(){
 			return {
-				opened: !this.$gdpr_serde.exists(),
+				opened: !this.$gdpr_savior?.exists?.(),
 				openModal: false,
 			}
 		},
@@ -50,7 +50,7 @@
 				this.$refs.gdpr.save();
 			},
 			open(){
-				this.$gdpr_serde.check();
+				this.$gdpr_savior.check();
 				this.opened = true;
 				this.openModal = true;
 			},
