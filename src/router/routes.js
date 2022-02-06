@@ -28,7 +28,7 @@ Route.group({ beforeEnter }, () => {
 			},
 			sitemap: {
 				loc: url("/"),
-				lastmod: "2021-09-08",
+				lastmod: "2022-02-06",
 				priority: 1,
 			},
 		},
@@ -42,7 +42,7 @@ Route.group({ beforeEnter }, () => {
 			},
 			sitemap: {
 				loc: url("/projets"),
-				lastmod: "2021-09-08",
+				lastmod: "2022-02-06",
 				priority: 0.8,
 			},
 		},
@@ -56,7 +56,7 @@ Route.group({ beforeEnter }, () => {
 			},
 			sitemap: {
 				loc: url("/cv"),
-				lastmod: "2021-09-08",
+				lastmod: "2022-02-06",
 				priority: 0.9,
 			},
 		},
@@ -70,7 +70,7 @@ Route.group({ beforeEnter }, () => {
 			},
 			sitemap: {
 				loc: url("/contact"),
-				lastmod: "2021-09-08",
+				lastmod: "2022-02-06",
 				priority: 0.7,
 			},
 		},
@@ -80,7 +80,7 @@ Route.group({ beforeEnter }, () => {
 		meta: {
 			sitemap: {
 				loc: url("/mentions-legales"),
-				lastmod: "2021-09-08",
+				lastmod: "2022-02-06",
 				priority: 0.1,
 			},
 		},
