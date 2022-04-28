@@ -5,7 +5,8 @@
 	"scripts": {
 		"serve": "vue-cli-service serve",
 		"build": "vue-cli-service build",
-		"sitemap": "vue-cli-service sitemap"
+		"sitemap": "vue-cli-service sitemap",
+		"postinstall": "sass-migrator division **/*.scss"
 	},
 	"dependencies": {
 		"@hscmap/vue-window": "^2.4.2",
@@ -40,11 +41,12 @@
 		"autoprefixer": "^9.8.0",
 		"babel-plugin-import": "^1.13.0",
 		"copy-webpack-plugin": "^6.0.2",
-		"css-mquery-packer": "^1.2.0",
 		"cssnano": "^4.1.10",
 		"dotenv-webpack": "^2.0.0",
 		"less": "^3.11.3",
 		"less-loader": "^6.1.0",
+		"postcss": "^8.0.0",
+		"postcss-merge-queries": "^1.0.3",
 		"sass": "^1.51.0",
 		"sass-loader": "^8.0.2",
 		"vue-cli-plugin-ant-design": "~1.0.1",
