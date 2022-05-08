@@ -85,7 +85,7 @@
 					//static
 					{
 						property: "og:type",
-						content: "website",
+						content: "Website",
 					},
 					{
 						property: "og:site_name",
