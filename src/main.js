@@ -9,6 +9,8 @@ import "./plugins/localStorage"
 import "./plugins/gdpr"
 import "./plugins/clipboard"
 import "./plugins/metaHelpers"
+import "./plugins/floating-window"
+import "./plugins/konami"
 
 //Vue.config.productionTip = false;
 

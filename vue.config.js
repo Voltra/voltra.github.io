@@ -80,7 +80,7 @@ module.exports = {
 			},
 			postcss: {
 				plugins: asSequence([
-					"css-mquery-packer",
+					"postcss-merge-queries",
 					"autoprefixer",
 					"cssnano",
 				]).map(plugin => require(plugin))

@@ -1,5 +1,5 @@
 <template>
-	<a-card title="Me Contacter">
+	<a-card :xs="12" :sm="10" :md="8" :lg="6" :xl="4" title="Me Contacter">
 		<a-icon slot="extra" type="notification" />
 		<a-row type="flex" justify="center" align="middle">
 			<a-col :span="12">

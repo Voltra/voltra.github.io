@@ -2,12 +2,17 @@
 	<!-- cf. https://markus.oberlehner.net/blog/vue-router-page-transitions/ -->
 
 	<div id="app">
-		<a-layout class="main">
+		<a-layout class="main" v-konami="openFloatingPlayer">
 			<Navbar/>
 
 			<a-layout-content style="display: flex">
+				<FloatingPlayer
+					:isOpen="displayFloatingPlayer"
+					@open="openFloatingPlayer"
+					@close="closeFloatingPlayer"/>
+
 				<a-row class="container" type="flex" justify="center" align="middle">
-					<a-col style="position: relative" :xs="11" :lg="9"> <!-- :md="10" :xl="6" -->
+					<a-col style="position: relative" :xs="11" :lg="9" :xl="8"> <!-- :md="10" :xl="6" -->
 						<keep-alive>
 							<transition class="router" :name="transitionName" mode="out-in">
 								<router-view/>
@@ -44,6 +49,7 @@
 	import GdprBanner from "@/components/GdprBanner"
 	import GdprOpener from "@/components/GdprOpener"
 	import Navbar from "@/components/Navbar"
+	import FloatingPlayer from "@/components/FloatingPlayer"
 	import moment from "moment"
 
 	const defaultTransition = "fade";
@@ -53,7 +59,16 @@
 			return {
 				transitionName: defaultTransition,
 				currentYear: moment().format("YYYY"),
+				displayFloatingPlayer: false,
 			};
+		},
+		methods: {
+			openFloatingPlayer(){
+				this.displayFloatingPlayer = true;
+			},
+			closeFloatingPlayer(){
+				this.displayFloatingPlayer = false;
+			},
 		},
 		created(){
 			this.$router.beforeEach((to, from, next) => {
@@ -133,6 +148,7 @@
 			GdprBanner,
 			GdprOpener,
 			Navbar,
+			FloatingPlayer,
 		},
 		computed: {
 			copyrightYear(){
