@@ -19,7 +19,7 @@
 <script>
 	import { StyleFactory } from "@hscmap/vue-window"
 	import { secondary } from "@/scss/settings.scss"
-import VueTypes from 'vue-types';
+	import VueTypes from 'vue-types';
 
 	const windowStyle = {
 		window: {
