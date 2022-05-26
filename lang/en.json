@@ -1,0 +1,25 @@
+{
+	"gdprGuard": {
+		"features": {
+			"name": "Features",
+			"description": "Required for the website to work properly"
+		},
+		"i18n_redirected": {
+			"name": "i18n_redirected",
+			"description": "Saves the current selected locale"
+		},
+
+		"RGPD": {
+			"name": "GDPR",
+			"description": "General Data Protection Regulation"
+		},
+		"gdpr": {
+			"name": "gdpr",
+			"description": "GDPR preferences"
+		},
+		"gdpr__version": {
+			"name": "gdpr__version",
+			"description": "GDPR preferences' version"
+		}
+	}
+}

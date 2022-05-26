@@ -37,6 +37,11 @@
 	import WebsiteProject from "@/components/WebsiteProject"
 
 	export default {
+		nuxtI18n: {
+			paths: {
+				en: "/projects",
+			},
+		},
 		head: {
 			title: "Mes Projets",
 			description: "Un aperçu des projets auxquels je participe.",

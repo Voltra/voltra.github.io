@@ -6,13 +6,46 @@ const description = "Site officiel de Ludwig GUERIN, aka Voltra the dev";
 export default {
 	// Target: https://go.nuxtjs.dev/config-target
 	target: "static",
-
 	loading: "~/components/Loader.vue",
 	loadingIndicator: "~/components/Loader.vue",
+	router: {
+		mode: "hash",
+	},
+
+	i18n: {
+		vueI18nLoader: true,
+		vueI18n: {
+			fallbackLocale: "fr",
+		},
+		langDir: "~/lang/",
+		strategy: "prefix_except_default",
+		detectBrowserLanguage: {
+			useCookie: true,
+			cookieKey: "i18n_redirected",
+			redirectOn: "root",
+		},
+		defaultLocale: "fr",
+		locales: [
+			{
+				code: "en",
+				iso: "en-US",
+				file: "en.json",
+			},
+			{
+				code: "fr",
+				iso: "fr-FR",
+				file: "fr.json",
+				isCatchallLocale: true,
+			},
+		],
+	},
+
+	sitemap: {
+		hostname: process.env.NUXT_ENV_BASE_URL,
+	},
 
 	// Global page headers: https://go.nuxtjs.dev/config-head
 	head: {
-		title: "Ludwig GUERIN",
 		titleTemplate: "%s | Ludwig GUERIN",
 		htmlAttrs: {
 			lang: "en",
@@ -51,23 +84,23 @@ export default {
 
 			//dynamic
 			{
-				vmid: "og:title",
+				hid: "og:title",
 				property: "og:title",
 				content: "Ludwig GUERIN",
-				template: "%s | Ludwig GUERIN",
+				template: "%s",
 			},
 			{
-				vmid: "og:description",
+				hid: "og:description",
 				property: "og:description",
 				content: description,
 			},
 			{
-				vmid: "description",
+				hid: "description",
 				property: "og:description",
 				content: description,
 			},
 			{
-				vmid: "keywords",
+				hid: "keywords",
 				property: "keywords",
 				content: "",
 			},
@@ -99,6 +132,7 @@ export default {
 		// 	ssr: false,
 		// },
 		"@/plugins/clipboard",
+		"@/plugins/route",
 	],
 
 	// Auto import components: https://go.nuxtjs.dev/config-components
@@ -108,7 +142,10 @@ export default {
 	buildModules: [],
 
 	// Modules: https://go.nuxtjs.dev/config-modules
-	modules: [],
+	modules: [
+		"@nuxtjs/i18n",
+		"@nuxtjs/sitemap",
+	],
 
 	// Build Configuration: https://go.nuxtjs.dev/config-build
 	build: {

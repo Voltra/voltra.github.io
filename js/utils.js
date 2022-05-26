@@ -30,22 +30,23 @@ export const makeMeta = ({ title, description, tags }) => ({
 	title,
 	meta: [
 		{
-			vmid: "og:title",
+			hid: "og:title",
 			property: "og:title",
 			content: title,
+			template: "%s | Ludwig GUERIN",
 		},
 		{
-			vmid: "og:description",
+			hid: "og:description",
 			property: "og:description",
 			content: description,
 		},
 		{
-			vmid: "description",
+			hid: "description",
 			property: "description",
 			content: description,
 		},
 		{
-			vmid: "keywords",
+			hid: "keywords",
 			property: "keywords",
 			content: makeKeywords(tags),
 		},

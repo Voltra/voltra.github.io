@@ -1,3 +1,43 @@
+<i18n lang="yaml">
+fr:
+  okText: Sauvegarder
+  cancelText: Annuler
+  managerTitle: Règlement sur la Gestion et la Protection des Données personnelles
+  rejectAll: Tout refuser
+  allowAll: Tout accepter
+  successfullyCancelChanges: Nous avons bien annulé vos modifications
+  failedToCancelChanges: Nous n'avons pas réussi à annuler vos modifications
+  successfullySavedPreferences: Nous avons sauvegardé vos préférences
+  failedToSavePreferences: Nous n'avons pas réussi à sauvegarder vos préférences
+  locatedIn: "Situé dans :"
+  gdprStorage:
+      cookies: cookies
+      fs: fichiers locaux
+      indexedDb: base de données intégrée au navigateur (IndexedDB)
+      localStorage: localStorage
+      sessionStorage: sessionStorage
+      server: serveur du site
+
+en:
+  okText: Save
+  cancelText: Cancel
+  managerTitle: General Data Protection Regulation
+  rejectAll: Reject all
+  allowAll: Allow all
+  successfullyCancelChanges: Your changes have been successfully canceled
+  failedToCancelChanges: We failed to cancel your changes
+  successfullySavedPreferences: Your preferences have been saved
+  failedToSavePreferences: We failed to save your preferences
+  locatedIn: "Located in:"
+  gdprStorage:
+	  cookies: cookies
+	  fs: local files
+	  indexedDb: browser's integrated database (IndexedDB)
+	  localStorage: localStorage
+	  sessionStorage: sessionStorage
+	  server: website's server
+</i18n>
+
 <template>
 	<a-modal
 		class="gdpr-modal"
@@ -6,27 +46,28 @@
 		:visible="opened"
 		@cancel="discard"
 		@ok="save"
-		okText="Sauvegarder"
-		cancelText="Annuler">
+		:okText="$t('okText')"
+		:cancelText="$t('cancelText')">
 		<GdprManager>
 			<template #default="{ manager, groups, toggleManager }">
-				<ACard class="gdpr" title="Règlement sur la Gestion et la Protection des Données personnelles">
+				<ACard class="gdpr" :title="$t('managerTitle')">
 					<template #extra>
 						<ASwitch class="gdpr__switch" :checked="manager.enabled" @change="toggleManager"/>
 					</template>
 
 					<AButtonGroup class="gdpr__ables">
 						<AButton type="error" class="primary gdpr__able" @click="disableAll">
-							Tout refuser
+							{{ $t('rejectAll') }}
 						</AButton>
+
 						<AButton type="primary" class="primary gdpr__able" @click="enableAll">
-							Tout accepter
+							{{ $t('allowAll') }}
 						</AButton>
 					</AButtonGroup>
 
 					<GdprGroup v-for="group in groups" :key="group.name" :group="group">
 						<template #default="{ guards, toggleGroup }">
-							<ACard class="gdpr__group" :title="group.name">
+							<ACard class="gdpr__group" :title="$t(`gdprGuard.${group.name}.name`)">
 								<template #extra>
 									<ASwitch
 										v-if="guards.length > 1"
@@ -38,21 +79,22 @@
 								</template>
 
 								<p class="gdpr__description">
-									{{ group.description }}
+									{{ $t(`gdprGuard.${group.name}.description`) }}
 								</p>
 
 								<GdprGuard v-for="guard in guards" :key="guard.name" :guard="guard">
 									<template #default="{ toggleGuard }">
-										<ACard class="gdpr__item" :title="guard.name">
+										<ACard class="gdpr__item" :title="$t(`gdprGuard.${guard.name}.name`)">
 											<em class="gdpr__storage" v-if="$gdprStorageToString(guard.storage)">
-												Situé dans : {{ $gdprStorageToString(guard.storage) }}
+												{{ $t('locatedIn') }} {{ $gdprStorageToString(guard.storage) }}
 											</em>
 
-											<p class="gdpr__description">{{ guard.description }}</p>
+											<p class="gdpr__description">
+												{{ $t(`gdprGuard.${guard.name}.description`) }}
+											</p>
 
 											<template #extra>
 												<ASwitch
-													v-if="guards.length > 1"
 													class="gdpr__switch"
 													:disabled="guard.required"
 													:checked="guard.enabled"
@@ -98,59 +140,77 @@
 				this.$emit("close");
 			},
 			async discard() {
-				const didStore = await this.$gdpr_savior.storeIfNotExists(this.$gdpr.raw());
-
-				if (didStore) {
-					this.$notification.info({
-						message: "Nous avons bien annulé vos modifications",
-						placement,
-					});
-				} else {
+				const onError = () => {
 					this.$notification.error({
-						message: "Nous n'avons pas réussi à annuler vos modifications",
+						message: this.$t('failedToCancelChanges'),
 						placement,
 					});
-				}
+				};
 
-				this.close();
+				try {
+					const didStore = await this.$gdpr_savior.storeIfNotExists(this.$gdpr.raw());
+
+					if (didStore) {
+						this.$notification.info({
+							message: this.$t('successfullyCancelChanges'),
+							placement,
+						});
+					} else {
+						onError();
+					}
+
+					this.close();
+				} catch(e) {
+					console.error(e);
+					onError();
+				}
 			},
 			async save() {
-				const didStore = await this.$gdpr_savior.store(this.$gdpr.raw());
-
-				if (didStore) {
-					this.$notification.success({
-						message: "Nous avons sauvegardé vos préférences",
-						placement,
-					});
-					this.$gdpr.closeBanner();
-				} else {
+				const onError = () => {
 					this.$notification.error({
-						message: "Nous n'avons pas réussi à sauvegarder vos préférences",
+						message: this.$t('failedToSavePreferences'),
 						placement,
 					});
-				}
+				};
 
-				this.close();
+				try {
+					const didStore = await this.$gdpr_savior.store(this.$gdpr.raw());
+
+					if (didStore) {
+						this.$notification.success({
+							message: this.$t('successfullySavedPreferences'),
+							placement,
+						});
+						this.$gdpr.closeBanner();
+					} else {
+						onError();
+					}
+
+					this.close();
+				} catch(e) {
+					console.error(e);
+					onError();
+				}
 			},
 			$gdprStorageToString(storage) {
 				switch (storage) {
 					case GdprStorage.Cookie:
-						return "cookies";
+						return this.$t('gdprStorage.cookies');
 
 					case GdprStorage.FileSystem:
-						return "fichiers locaux";
+						return this.$t('gdprStorage.fs');
 
 					case GdprStorage.IndexedDb:
-						return "base de données intégrée";
+						return this.$t('gdprStorage.indexedDb');
 
 					case GdprStorage.LocalStorage:
-						return "localStorage";
+						return this.$t('gdprStorage.localStorage');
 
 					case GdprStorage.SessionStorage:
-						return "sessionStorage";
+						return this.$t('gdprStorage.sessionStorage');
 
 					case GdprStorage.ServerStorage:
-						return "serveur";
+						return this.$t('gdprStorage.server');
 
 					default:
 						return null;

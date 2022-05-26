@@ -1,8 +1,22 @@
+<i18n lang="yaml">
+fr:
+  homeLabel: Accueil
+  projectsLabel: Projets
+  cvLabel: CV
+  contactLabel: Me Contacter
+
+en:
+  homeLabel: Home
+  projectsLabel: Projects
+  cvLabel: CV
+  contactLabel: Get in touch
+</i18n>
+
 <template>
 	<ALayoutHeader class="nav">
 		<APageHeader class="nav__header" ref="header" :backIcon="false">
 			<template #title>
-				<NuxtLink to="/" class="nav__title">
+				<NuxtLink :to="$route_('index')" class="nav__title">
 					<a-avatar v-bind="avatar"/>
 					Ludwig
 				</NuxtLink>
@@ -21,6 +35,8 @@
 </template>
 
 <script>
+	import { asSequence } from "sequency";
+
 	export default {
 		data() {
 			return {
@@ -31,22 +47,22 @@
 				},
 				routes: [
 					{
-						title: "Accueil",
+						title: this.$t('homeLabel'),
 						icon: "home",
 						key: "index",
 					},
 					{
-						title: "Projets",
+						title: this.$t('projectsLabel'),
 						icon: "project",
 						key: "projets",
 					},
 					{
-						title: "CV",
+						title: this.$t('cvLabel'),
 						icon: "file-text",
 						key: "cv",
 					},
 					{
-						title: "Me Contacter",
+						title: this.$t('contactLabel'),
 						icon: "notification",
 						key: "contact",
 					},
@@ -55,22 +71,23 @@
 		},
 		computed: {
 			selectedKeys(){
-				return [
-					this.extractKey(this.$route),
-				];
+				const routeKey = this.extractKey(this.$route);
+
+				return asSequence(this.routes)
+					.map(this.extractKey)
+					.filter(key => key === routeKey)
+					.toArray();
 			},
 		},
 		methods: {
 			extractKey(route){
-				return route.key ?? route.name;
+				return route.key ?? this.getRouteBaseName(route);
 			},
 			onClick({ key }){
 				if(key === this.extractKey(this.$route))
 					return;
 
-				this.$router.push({
-					name: key,
-				});
+				this.$router.push(this.$route_(key));
 			},
 		}
 	};

@@ -1,16 +1,24 @@
+<i18n lang="yaml">
+fr:
+  legalLabel: Mentions légales
+
+en:
+  legalLabel: Legal notice
+</i18n>
+
 <template>
 	<ALayout class="main" v-konami="openFloatingPlayer">
 		<Navbar/>
 
-		<Loader ref="loader" :isLoading="!loaded" />
+		<Loader ref="loader" :isLoading="!loaded"/>
 
 		<ALayoutContent style="display: flex">
-			<client-only>
-				<FloatingPlayer
-					:isOpen="displayFloatingPlayer"
-					@open="openFloatingPlayer"
-					@close="closeFloatingPlayer"/>
-			</client-only>
+			<!--			<client-only>
+							<FloatingPlayer
+								:isOpen="displayFloatingPlayer"
+								@open="openFloatingPlayer"
+								@close="closeFloatingPlayer"/>
+						</client-only>-->
 
 			<ARow class="container" type="flex" justify="center" align="middle">
 				<ACol style="position: relative" :xs="11" :lg="9" :xl="8">
@@ -33,8 +41,8 @@
 				<client-only>
 					<GdprOpener @click="showBanner" class="opener"/>
 				</client-only>
-				<NuxtLink :to="{name: 'mentions-legales'}">
-					Mentions légales
+				<NuxtLink :to="localePath({name: 'mentions-legales'})">
+					{{ $t("legalLabel") }}
 				</NuxtLink>
 			</p>
 
@@ -48,12 +56,17 @@
 </template>
 
 <script>
-	import { getYear } from "date-fns"
+	import { getYear } from "date-fns";
 
 	const defaultTransition = "fade";
 
 	export default {
-		jsonld: function () {
+		head() {
+			return this.$nuxtI18nHead({
+				addSeoAttributes: true,
+			});
+		},
+		jsonld() {
 			const firstName = "Ludwig";
 			const lastName = "GUÉRIN";
 
@@ -91,7 +104,7 @@
 			this.loaded = true;
 		},
 		transition(to, from) {
-			if(!from) {
+			if (!from) {
 				return defaultTransition;
 			}
 
@@ -101,7 +114,7 @@
 			return toLength < fromLength ? "slide-left" : "slide-right";
 		},
 		computed: {
-			copyrightYear(){
+			copyrightYear() {
 				return `2020&nbsp-&nbsp;${this.currentYear}`;
 			},
 		},
@@ -109,20 +122,20 @@
 			showBanner() {
 				this.$refs.banner?.showModal();
 			},
-			openFloatingPlayer(){
+			openFloatingPlayer() {
 				this.displayFloatingPlayer = true;
 			},
-			closeFloatingPlayer(){
+			closeFloatingPlayer() {
 				this.displayFloatingPlayer = false;
 			},
 		},
-	}
+	};
 </script>
 
 <style lang="scss">
 	@import "~@/scss/settings.scss";
 
-	.router{
+	.router {
 		transition-duration: 0.6s;
 		transition-property: height, opacity, transform;
 		transition-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
@@ -130,37 +143,37 @@
 		opacity: 1;
 	}
 
-	#app{
+	#app {
 		width: 100%;
 		height: 100vh;
 	}
 
-	.main{
+	.main {
 		min-height: 100vh !important;
 	}
 
-	.container{
+	.container {
 		min-height: 100%;
 		width: 100%;
 	}
 
-	.foot{
+	.foot {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 
-		& > *{
+		& > * {
 			display: block;
 
 			margin-left: 1em;
 
-			&:first-child{
+			&:first-child {
 				margin-left: 0;
 			}
 		}
 	}
 
-	.footer{
+	.footer {
 		text-align: center;
 		padding: 1em !important;
 	}
@@ -201,7 +214,7 @@
 	}
 
 	.fade-enter,
-	.fade-leave-active{
+	.fade-leave-active {
 		opacity: 0
 	}
 </style>
