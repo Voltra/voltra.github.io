@@ -1,3 +1,17 @@
+<i18n lang="yaml">
+fr:
+  seo:
+    title: Mes Projets
+    description: Un aperçu des projets auxquels j'ai pu participer.
+    keywords: projets,sites,bibliothèques,librairies
+
+en:
+  seo:
+    title: My Projects
+    description: A selection of projects I've been a part of.
+    keywords: projects,websites,libraries
+</i18n>
+
 <template>
 	<Flipper :flipKey="page" spring="wobbly">
 		<a-row type="flex" align="middle" justify="center" :gutter="[16, 16]">
@@ -11,12 +25,12 @@
 				:xl="4"
 				class="project"
 			>
-				<keep-alive>
-					<Flipped :flipId="project.title" :translate="true" :opacity="true" :scale="true">
+				<Flipped :flipId="project.title" :translate="true" :opacity="true" :scale="true">
+					<keep-alive>
 						<GithubProject v-if="project.type === 'github'" :project="project" />
 						<WebsiteProject v-else-if="project.type === 'website'" :project="project" />
-					</Flipped>
-				</keep-alive>
+					</keep-alive>
+				</Flipped>
 			</a-col>
 
 			<a-col :span="12" v-if="projects.length > pageSize">
@@ -35,22 +49,14 @@
 	import { Flipped, Flipper } from "vue-flip-toolkit"
 	import GithubProject from "@/components/GithubProject"
 	import WebsiteProject from "@/components/WebsiteProject"
+	import { pageMixin } from "~/js/mixins/page";
 
 	export default {
+		mixins: [pageMixin],
 		nuxtI18n: {
 			paths: {
 				en: "/projects",
 			},
-		},
-		head: {
-			title: "Mes Projets",
-			description: "Un aperçu des projets auxquels je participe.",
-			tags: [
-				"projets",
-				"sites",
-				"bibliothèques",
-				"librairies",
-			],
 		},
 		components: {
 			Flipped,

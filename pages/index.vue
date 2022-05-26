@@ -30,6 +30,10 @@ fr:
     identifiable au logo bleu marqué d'un L blanc.
   projectsCta: Voir mes projets
   cvCta: Voir mon CV en ligne
+  seo:
+    title: Accueil
+    description: Je m'appelle Ludwig GUERIN et je suis un développeur front-end.
+    keywords: ludwig,guerin,développeur,programmation,web,intégration,passion
 
 en:
   title: Who am I?
@@ -51,6 +55,10 @@ en:
     via the blue logo with a white L.
   projectsCta: My projects
   cvCta: My online CV
+  seo:
+    title: Home
+    description: My name is Ludwig GUERIN and I'm a front-end developer.
+    keywords: ludwig,guerin,developer,web,front-end,passion
 </i18n>
 
 <template>
@@ -96,22 +104,10 @@ en:
 </template>
 
 <script>
-	import { makeMeta } from "~/js/utils";
+	import { pageMixin } from "~/js/mixins/page";
 
 	export default {
-		head: makeMeta({
-			title: "Accueil",
-			description: "Je m'appelle Ludwig GUERIN et je suis un développeur front-end.",
-			tags: [
-				"ludwig",
-				"guerin",
-				"développeur",
-				"programmation",
-				"web",
-				"intégration",
-				"passion",
-			],
-		}),
+		mixins: [pageMixin],
 	};
 </script>
 

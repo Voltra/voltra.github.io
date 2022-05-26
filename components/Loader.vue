@@ -1,5 +1,5 @@
 <template>
-	<transition name="fade" appear>
+	<FadeTransition tag="div" appear>
 		<div id="loader" v-if="shouldBeDisplayed">
 			<img src="/img/voltra.png" alt="Voltra The Dev" width="200" height="200"/>
 
@@ -10,15 +10,19 @@
 				<div></div>
 			</div>
 		</div>
-	</transition>
+	</FadeTransition>
 </template>
 
 <script>
 	import VueTypes from "vue-types";
+	import { FadeTransition } from "vue2-transitions";
 
 	export default {
 		props: {
 			isLoading: VueTypes.bool.def(false),
+		},
+		components: {
+			FadeTransition,
 		},
 		data() {
 			return {

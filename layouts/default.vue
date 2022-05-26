@@ -41,10 +41,17 @@ en:
 				<client-only>
 					<GdprOpener @click="showBanner" class="opener"/>
 				</client-only>
-				<NuxtLink :to="localePath({name: 'mentions-legales'})">
+				<NuxtLink :to="$route_('mentions-legales')">
 					{{ $t("legalLabel") }}
 				</NuxtLink>
 			</p>
+
+
+			<ASelect v-model="localeModel">
+				<ASelectOption v-for="locale in $i18n.locales" :key="locale.code">
+					{{ locale.name }}
+				</ASelectOption>
+			</ASelect>
 
 			<keep-alive>
 				<client-only>
@@ -82,8 +89,12 @@ en:
 					url: url(),
 				},
 				{
-					"@context": "http://xmlns.com/foaf/0.1/",
-					"@id": "https://www.linkedin.com/in/ludwig-guerin",
+					"@context": {
+						"@vocab": "http://xmlns.com/foaf/0.1/",
+						"label": "http://www.w3.org/2000/01/rdf-schema#label",
+						"homepage": { "@type": "@id" },
+						"maker": { "@type": "@id" }
+					},
 					"@type": "Person",
 					name,
 					firstName,
@@ -114,6 +125,14 @@ en:
 			return toLength < fromLength ? "slide-left" : "slide-right";
 		},
 		computed: {
+			localeModel: {
+				get() {
+					return this.$i18n.locale;
+				},
+				set(code) {
+					this.$router.push(this.switchLocalePath(code));
+				}
+			},
 			copyrightYear() {
 				return `2020&nbsp-&nbsp;${this.currentYear}`;
 			},

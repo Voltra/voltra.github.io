@@ -27,11 +27,13 @@ export default {
 		defaultLocale: "fr",
 		locales: [
 			{
+				name: "English",
 				code: "en",
 				iso: "en-US",
 				file: "en.json",
 			},
 			{
+				name: "Français",
 				code: "fr",
 				iso: "fr-FR",
 				file: "fr.json",
@@ -42,6 +44,22 @@ export default {
 
 	sitemap: {
 		hostname: process.env.NUXT_ENV_BASE_URL,
+	},
+
+	pwa: {
+		meta: {
+			theme_color: "#0087B3",
+		},
+		manifest: {
+			name: process.env.NUXT_ENV_PROJECT_NAME,
+			short_name: process.env.NUXT_ENV_PROJECT_NAME,
+			description: process.env.NUXT_ENV_PROJECT_DESCRIPTION,
+			publicPath: process.env.NUXT_ENV_BASE_URL,
+			background_color: "#f0f2f5",
+		},
+		workbox: {
+			enabled: true,
+		},
 	},
 
 	// Global page headers: https://go.nuxtjs.dev/config-head
@@ -145,6 +163,7 @@ export default {
 	modules: [
 		"@nuxtjs/i18n",
 		"@nuxtjs/sitemap",
+		"@nuxtjs/pwa",
 	],
 
 	// Build Configuration: https://go.nuxtjs.dev/config-build

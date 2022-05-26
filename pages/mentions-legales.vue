@@ -41,6 +41,10 @@ fr:
         attribués au propriétaire du site.
       openGraph: Les designs utilisés pour la bannière Open Graph sont la propriété de
   backHome: Retourner à l'accueil
+  seo:
+    title: Mentions légales
+    description: Mentions légales et informations relatives à la protection des données.
+    keywords: 'mentions,légales'
 
 en:
   title: Legal notice
@@ -79,6 +83,10 @@ en:
         They are not to be considered as attributed to the owner of this website.
       openGraph: Designs used for the Open Graph banner are the property of
   backHome: Back to homepage
+  seo:
+    title: Legal notice
+    description: Legal notice and information regarding users' personal data.
+    keywords: 'legal,notice'
 </i18n>
 
 <template>
@@ -166,13 +174,15 @@ en:
 
 <script>
 	import { makeMeta } from "~/js/utils";
+	import { pageMixin } from "~/js/mixins/page";
 
 	const arobase = "[at}";
 
 	export default {
+		mixins: [pageMixin],
 		nuxtI18n: {
 			paths: {
-				en: "/legal",
+				en: "/legal-notice",
 			}
 		},
 		head: makeMeta({
