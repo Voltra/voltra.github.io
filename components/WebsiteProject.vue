@@ -1,13 +1,23 @@
+<i18n lang="yaml">
+fr:
+  atWork: Au boulot
+  coverImage: Image de couverture
+
+en:
+  atWork: At work
+  coverImage: Cover image
+</i18n>
+
 <template>
 	<ExternalLink :href="project.url">
 		<a-card hoverable>
 			<img
 				slot="cover"
 				class="project__cover"
-				alt="Image de couverture"
+				:alt="$t('coverImage')"
 				:src="coverUrl"/>
 
-			<a-badge v-if="project.job" count="Au boulot"/>
+			<a-badge v-if="project.job" :count="$t('atWork')"/>
 
 			<a-card-meta :title="project.title">
 				<p slot="description" v-html="project.description">
@@ -64,11 +74,15 @@
 			}).loose,
 		},
 		computed: {
+			projectRootUrl() {
+				const url = new URL(this.project.url);
+				return `${url.protocol}//${url.hostname}`;
+			},
 			coverUrl(){
 				if(this.project.cover === null)
 					return "#";
 
-				return this.project.cover.replace("{{ site }}", this.project.url);
+				return this.project.cover.replace("{{ site }}", this.projectRootUrl);
 			},
 		},
 	}

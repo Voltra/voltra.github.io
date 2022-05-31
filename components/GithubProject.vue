@@ -19,8 +19,6 @@
 	import VueTypes from "vue-types"
 	import ExternalLink from "@/components/ExternalLink"
 
-	//TODO: Load data from github API
-
 	export default {
 		components: {
 			ExternalLink,

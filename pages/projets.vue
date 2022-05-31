@@ -79,14 +79,8 @@ en:
 						type: "github",
 						cover: `/${process.env.NUXT_ENV_OG_IMAGE_URI}`,
 						repo: "voltra.github.io",
-						title: "Site officiel",
-						description: `Site statique de Ludwig GUERIN, aka <em>"Voltra the dev"</em>.
-						Progressive Web App réalisé via l'écosystème Vue.
-						Reposant précédemment sur Vue CLI, il a été récemment migré vers Nuxt 2.
-						Bien que pour l'instant cordonnier mal chaussé, une version 2 est en
-						préparation proposant un véritable site web complet et une charte graphique
-						plus chattoyante.
-`,
+						title: this.$t('projects.website.title'),
+						description: this.$t('projects.website.description'),
 					},
 
 					//
@@ -95,20 +89,16 @@ en:
 						type: "website",
 						cover: "{{ site }}/og.jpg",
 						url: "https://www.the-scientist-oath.com",
-						title: "Le Serment du Scientifique",
-						description: `Un projet visant à fournir une généralisation du Serment d'Hippocrate
-						à tous les scientifiques, y compris dans les métiers liés à l'informatique.
-						`,
+						title: this.$t('projects.scientistOath.title'),
+						description: this.$t('projects.scientistOath.description'),
 						extras: [],
 					},
 					{
 						type: "website",
 						cover: "{{ site }}/wp-content/uploads/2022/04/opengraph.jpeg",
-						url: "https://www.kiplin.com",
-						title: "Kiplin",
-						description: `Lutter contre la sédentarité et par le jeu, telle est la mission
-						de Kiplin. C'est avec grand plaisir que j'ai pu, en tant qu'Intégrateur Web chez swimming pool,
-						poser ma pierre à l'édifice qu'est la refonte de leur site web.`,
+						url: this.$t('projects.kiplin.url'),
+						title: this.$t('projects.kiplin.title'),
+						description: this.$t('projects.kiplin.description'),
 						job: true,
 						extras: [
 							{
@@ -121,15 +111,8 @@ en:
 						type: "website",
 						cover: "{{ site }}/assets/img/og/recherche.png",
 						url: "https://mon-taraud.com",
-						title: "Projet Transversal (mon-taraud.com)",
-						description: `Site web utilitaire permettant de
-						déterminer facilement les références produit d'un
-						taraud à partir de ses dimensions. Réalisé dans le cadre
-						de mes études à Polytech Nantes, sur toute une année.
-						Le but du projet transversal étant de mettre les étudiants
-						en situation réelle avec contact client, retours, etc&hellip;&nbsp;.
-						Étant reponsable des choix techniques, le site a été réalisé
-						en Vue et Adonis.`,
+						title: this.$t('projects.monTaraud.title'),
+						description: this.$t('projects.monTaraud.description'),
 						extras: [
 							{
 								name: "La Maison Du Taraud",
@@ -137,7 +120,7 @@ en:
 							},
 							{
 								name: "Polytech Nantes",
-								url: "https://polytech.univ-nantes.fr",
+								url: this.$t('projects.monTaraud.urls.polytech'),
 							},
 						],
 					},
@@ -145,64 +128,43 @@ en:
 						type: "github",
 						repo: "jsonclient",
 						cover: "{{ repo }}/raw/master/logo.png",
-						title: "Client JSON ($json)",
-						description: `Client HTTP spécialisé dans les communications
-						JSON permettant d'échanger facilement des données avec
-						une API REST par exemple. Il s'agit en réalité d'une petite
-						surcouche pour l'API Fetch.`,
+						title: this.$t('projects.$json.title'),
+						description: this.$t('projects.$json.description'),
 					},
 					{
 						type: "github",
 						repo: "mvea",
 						cover: "{{ repo }}/raw/master/res/interactions.png",
-						title: "MVEA",
-						description: `Patron d'architecture logicielle, variante de MVC,
-						en cours de spécification. Il vise à augmenter la réutilisabilité
-						des composants ainsi qu'à maximiser la séparation des responsabilités
-						tout en intégrant et en spécifiant des pratiques récurrentes dans les
-						applications MVC.`,
+						title: this.$t('projects.mvea.title'),
+						description: this.$t('projects.mvea.description'),
 					},
 					{
 						type: "github",
 						repo: "validatueur",
 						cover: "{{ repo }}/raw/dev/res/validatueur.svg",
-						title: "Validatueur",
-						description: `Bibliothèque JavaScript d'aissainissement et de validation
-						visant à être utilisable dans toute application, quelle que soit
-						la complexité des formulaires. Destiné à pouvoir être utilisé
-						à la fois pour la validation côté client (UX) et pour la
-						validation côté serveur (sécurité).`,
+						title: this.$t('projects.validatueur.title'),
+						description: this.$t('projects.validatueur.description'),
 					},
 					{
 						type: "github",
 						repo: "gdpr-guard",
 						cover: "{{ repo }}/raw/master/gdpr-guard.png",
-						title: "GDPR Guard",
-						description: `Bibliothèque de gestion de préférences
-						RGPD permettant un listing précis ainsi qu'une logique conditionnelle
-						en fonction des paramètres enregistrés par l'utilisateur.
-						Le but étant de permettre une flexibilité d'utilisation aussi
-						bien du point de vue utilisateur que du point de vue développeur.
-						À noter qu'il existe divers outils permettant l'intégration de la
-						bibliothèque avec d'autres technologies (e.g. frameworks front-end).`,
+						title: this.$t('projects.gdprGuard.title'),
+						description: this.$t('projects.gdprGuard.description'),
 					},
 					{
 						type: "github",
 						repo: "lightquery",
 						cover: "{{ repo }}/raw/master/logo/logo.png",
-						title: "Lightquery",
-						description: `Mon premier projet Open Source, une alternative
-						plus légère et plus moderne à jQuery. Réécrit entièrement en 2020 pour proposer une véritable alternative
-						propre et légère.`,
+						title: this.$t('projects.gdprGuard.title'),
+						description: this.$t('projects.gdprGuard.description'),
 					},
 					{
 						type: "github",
 						repo: "lazy-collection",
 						cover: "{{ repo }}/raw/master/res/lazy-collection.png",
-						title: "Lazy collection",
-						description: `Bibliothèque de manipulation de collections en PHP favorisant
-						l'expressivité tout en gardant une complexité linéaire indépendamment
-						du nombre d'opérations.`,
+						title: this.$t('projects.lazyCollection.title'),
+						description: this.$t('projects.lazyCollection.description'),
 					},
 				],
 			};

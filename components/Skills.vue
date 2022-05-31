@@ -1,7 +1,19 @@
+<i18n lang="yaml">
+fr:
+  labels:
+    general: Compétences générales
+    programming: Langages de programmation
+
+en:
+  labels:
+    general: General skills
+    programming: Programming languages
+</i18n>
+
 <template>
 	<a-layout>
 		<a-layout-content>
-			<a-card v-bind="card" title="Compétences générales">
+			<a-card v-bind="card" :title="$t('labels.general')">
 				Je suis très confortable avec l'anglais et suis parfaitement
 				capable d'initier et de tenir une conversation ainsi que de rédiger
 				des documents écrits.<br/>
@@ -9,7 +21,7 @@
 				d'économie, de gestion, de communication et de gestion de projets.
 			</a-card>
 
-			<a-card v-bind="card" title="Langages de programmation">
+			<a-card v-bind="card" :title="$t('labels.programming')">
 				<a-row v-bind="row">
 					<a-col v-bind="col">
 						Maîtrisés&nbsp;:

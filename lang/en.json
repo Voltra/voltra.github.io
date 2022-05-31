@@ -21,5 +21,51 @@
 			"name": "gdpr__version",
 			"description": "GDPR preferences' version"
 		}
+	},
+	"projects": {
+		"website": {
+			"title": "Official website",
+			"description": "My static website. PWA made with love and using Vue's ecosystem. Previously made with Vue CLI, it has been recently migrated to Nuxt 2. Even though right now my website doesn't reflect what I can achieve in terms of UI, a v2 is in the works that will be a fully-featured website and much better UI and UX."
+		},
+		"scientistOath": {
+			"title": "The Scientist's Oath",
+			"description": "A project aiming to provide a sort of generalized Hippocratic Oath for all Scientists, including but not limited to Computer Scientists. An Oath to live by for Scientists all around the globe.",
+			"url": "https://www.kiplin.com/en/"
+		},
+		"kiplin": {
+			"title": "Kiplin",
+			"description": "Fighting via games against too much sedentarity, such is Kiplin's mission. It's with great pleasure that I could, as a Front-End Developer at swimming pool, help bringing to life their new website."
+		},
+		"monTaraud": {
+			"title": "Find the tap you need (mon-taraud.com)",
+			"description": "A website made in less than a year as part of my studies at Polytech Nantes (the Engineering School of the University of Nantes). A tool to help a local business' clients (and others) determining the dimensions of their taps and the related product references. The goal of that project was to put students in a real-life project situation. Being the CTO, this website was made using Vue and AdonisJS.",
+			"urls": {
+				"polytech": "https://polytech.univ-nantes.fr/en"
+			}
+		},
+		"$json": {
+			"title": "JSON Client ($json)",
+			"description": "HTTP client specialized to handle JSON-based communication with a REST API for instance. It's just a tiny wrapper around the Fetch API"
+		},
+		"mvea": {
+			"title": "MVEA",
+			"description": "Architectural pattern, derivative of MVC, whose specifications are being written. It aims to maximize reusability thanks to a higher degree of separation of concerns whilst taking into account modern uses and tools of MVC applications."
+		},
+		"validatueur": {
+			"title": "Validatueur",
+			"description": "JavaScript validation and sanitization library that aims to be easy to use and integrate to any application, no matter its complexity. Designed to be usable both for front-end validation (for UX) and back-end validation (for security)."
+		},
+		"gdprGuard": {
+			"title": "GDPR Guard",
+			"description": "Library that makes it easy to be GDPR compliant with personal data management. It allows you to list every piece of data to the user whilst being able to have conditional logic to execute code depending on the user's preferences. The goal of the library being to provide flexibility of use for both the users and the developers. Note that there's a whole ecosystem design to help with integrating the library with other stuff (such as front-end frameworks, for instance)."
+		},
+		"lightquery": {
+			"title": "Lightquery",
+			"description": "My very first Open Source project: a lighter and more modern alternative to jQuery. Completely rewritten from the ground up in 2020 to truly offer a cleaner and lighter alternative."
+		},
+		"lazyCollection": {
+			"title": "Lazy collection",
+			"description": "PHP library for collections manipulation that helps make code more expressive whilst maintaining a linear cyclomatic complexity regardless of the number of operations."
+		}
 	}
 }

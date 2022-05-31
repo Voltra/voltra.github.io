@@ -8,7 +8,7 @@ fr:
 en:
   homeLabel: Home
   projectsLabel: Projects
-  cvLabel: CV
+  cvLabel: Résumé
   contactLabel: Get in touch
 </i18n>
 
@@ -23,10 +23,12 @@ en:
 			</template>
 
 			<template #extra>
-				<AMenu class="menu" mode="horizontal" @click="onClick" :selectedKeys="selectedKeys">
+				<AMenu class="menu" mode="horizontal" :selectedKeys="selectedKeys">
 					<AMenuItem v-for="route in routes" :key="extractKey(route)">
-						<AIcon :type="route.icon"/>
-						{{ route.title }}
+						<NuxtLink :to="$route_(route.key)">
+							<AIcon :type="route.icon"/>
+							{{ route.title }}
+						</NuxtLink>
 					</AMenuItem>
 				</AMenu>
 			</template>
@@ -82,12 +84,6 @@ en:
 		methods: {
 			extractKey(route){
 				return route.key ?? this.getRouteBaseName(route);
-			},
-			onClick({ key }){
-				if(key === this.extractKey(this.$route))
-					return;
-
-				this.$router.push(this.$route_(key));
 			},
 		}
 	};
