@@ -3,28 +3,50 @@ fr:
   labels:
     general: Compétences générales
     programming: Langages de programmation
+    libraries: Bibliothèques et frameworks
+    tools: Outils
+    mastered: Maîtrisés&nbsp;&colon;
+    grasped: Appréhendés&nbsp;&colon;
+  intro: |
+    Je suis très confortable avec l'anglais et suis parfaitement
+    capable d'initier et de tenir une conversation ainsi que de rédiger
+    des documents écrits.<br/>
+    J'ai également, par ma formation en IUT et à Polytech, des notions
+    d'économie, de gestion, de communication et de gestion de projets.
+  quips:
+    dontMakeMeUseIt: merci de ne pas me le faire utiliser
+    andFlutter: et Flutter
+    justABit: très légèrement
 
 en:
   labels:
     general: General skills
     programming: Programming languages
+    libraries: Libraries and frameworks
+    tools: Tools
+    mastered: Mastered&colon;
+    grasped: Grasped&colon;
+  intro: |
+    I'm more than comfortable with speaking in English and I'm able
+    to initiate and hold a conversation as well as writing documents.<br/>
+    Thanks to my studies, I also have notions of economy, management and communication.
+  quips:
+    dontMakeMeUseIt: please don't make me use that
+    andFlutter: with Flutter
+    justABit: just a bit
 </i18n>
 
 <template>
 	<a-layout>
 		<a-layout-content>
 			<a-card v-bind="card" :title="$t('labels.general')">
-				Je suis très confortable avec l'anglais et suis parfaitement
-				capable d'initier et de tenir une conversation ainsi que de rédiger
-				des documents écrits.<br/>
-				J'ai également, par ma formation en IUT et à Polytech, des notions
-				d'économie, de gestion, de communication et de gestion de projets.
+				<span v-html="$t('intro')"/>
 			</a-card>
 
 			<a-card v-bind="card" :title="$t('labels.programming')">
 				<a-row v-bind="row">
 					<a-col v-bind="col">
-						Maîtrisés&nbsp;:
+						<span v-html="$t('labels.mastered')"/>
 						<ul>
 							<li>HTML</li>
 							<li>
@@ -71,7 +93,7 @@ en:
 					</a-col>
 
 					<a-col v-bind="col">
-						Appréhendés&nbsp;:
+						<span v-html="$t('labels.grasped')"/>
 						<ul>
 							<li>
 								<ExternalLink href="https://github.com/Voltra/streamz/blob/master/src/stream.ts">
@@ -81,7 +103,7 @@ en:
 							<li>
 								Python
 								<small>
-									(merci de ne pas me le faire utiliser)
+									({{ $t('quips.dontMakeMeUseIt') }})
 								</small>
 							</li>
 							<li>Ruby</li>
@@ -104,7 +126,7 @@ en:
 								<ExternalLink href="https://github.com/Voltra/mobile-youtube-dl/tree/dev">
 									Dart
 									<small>
-										(et Flutter)
+										({{ $t('quips.andFlutter') }})
 									</small>
 								</ExternalLink>
 							</li>
@@ -113,10 +135,10 @@ en:
 				</a-row>
 			</a-card>
 
-			<a-card v-bind="card" title="Bibliothèques et frameworks">
+			<a-card v-bind="card" :title="$t('labels.libraries')">
 				<a-row v-bind="row">
 					<a-col v-bind="col">
-						Maîtrisés&nbsp;:
+						<span v-html="$t('labels.mastered')"/>
 						<ul>
 							<li>
 								<ExternalLink href="https://gist.github.com/Voltra/acb8bfc443f61b8318151f271728c340">
@@ -199,7 +221,7 @@ en:
 					</a-col>
 
 					<a-col v-bind="col">
-						Abordés&nbsp;:
+						<span v-html="$t('labels.grasped')"/>
 						<ul>
 							<li>
 								<ExternalLink href="https://github.com/Voltra/vuelectron-music/blob/master/src/index.js">
@@ -242,7 +264,7 @@ en:
 							<li>
 								Symfony
 								<small>
-									(très légèrement)
+									({{ $t('quips.justABit') }})
 								</small>
 							</li>
 							<li>
@@ -266,10 +288,10 @@ en:
 				</a-row>
 			</a-card>
 
-			<a-card v-bind="card" title="Outils">
+			<a-card v-bind="card" :title="$t('labels.tools')">
 				<a-row v-bind="row">
 					<a-col v-bind="col">
-						Maîtrisés&nbsp;:
+						<span v-html="$t('labels.mastered')"/>
 						<ul>
 							<li>Git</li>
 							<li>Git Flow</li>
@@ -325,7 +347,7 @@ en:
 					</a-col>
 
 					<a-col v-bind="col">
-						Appréhendés&nbsp;:
+						<span v-html="$t('labels.grasped')"/>
 						<ul>
 							<li>
 								<ExternalLink href="https://github.com/Voltra/dotfiles/blob/master/.vimrc">

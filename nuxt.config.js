@@ -17,6 +17,9 @@ export default {
 		vueI18n: {
 			fallbackLocale: "fr",
 		},
+		/*lazy: {
+			skipNuxtState: true, // better static generation
+		},*/
 		langDir: "~/lang/",
 		strategy: "prefix_except_default",
 		detectBrowserLanguage: {
