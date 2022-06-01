@@ -1,3 +1,11 @@
+<i18n lang="yaml">
+fr:
+  classes: Matières principales&nbsp;&colon;
+
+en:
+  classes: Main classes
+</i18n>
+
 <template>
 	<ExternalLink :href="scholarship.school.url">
 		<a-card hoverable :title="scholarship.title">
@@ -12,7 +20,7 @@
 			<p v-html="scholarship.description"></p>
 			<template v-if="scholarship.interests.length">
 				<br/>
-				<p>Matières principales&nbsp;:</p>
+				<p v-html="$t('classes')" />
 				<ul>
 					<li v-for="interest in scholarship.interests" :key="interest">
 						{{ interest }}

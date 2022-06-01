@@ -149,7 +149,8 @@ en:
 										vuex,
 										vue-router,
 										vue-routisan,
-										vuex-pathify
+										vuex-pathify,
+										vuex-orm
 										)
 									</small>
 								</ExternalLink>

@@ -67,5 +67,50 @@
 			"title": "Lazy collection",
 			"description": "PHP library for collections manipulation that helps make code more expressive whilst maintaining a linear cyclomatic complexity regardless of the number of operations."
 		}
-	}
+	},
+	"studies": {
+		"polytech": {
+			"year": 2021,
+			"title": "Engineering degree in Computer Science",
+			"description": "3 years program, after 2 years of undergraduate studies, to get the title of Engineer",
+			"school": {
+				"name": "Polytech Nantes (the Engineering School of the University of Nantes)",
+				"url": "https://polytech.univ-nantes.fr/en"
+			},
+			"interests": [
+				"Programming",
+				"Software Modelling",
+				"Multimedia",
+				"Databases",
+				"Networking",
+				"English",
+				"Project management (notions)",
+				"Economy (notions)",
+				"Communication (notions)",
+				"Research (notions)"
+			]
+		},
+		"dut": {
+			"year": 2018,
+			"title": "University Diploma of Technology in Computer Science",
+			"description": "2 years undergraduate studies",
+			"school": {
+				"name": "University Institute of Technology of Nantes",
+				"url": "https://iutnantes.univ-nantes.fr"
+			},
+			"interests": [
+				"Algorithms",
+				"Data Structures",
+				"Programming (software, web, mobile)",
+				"Software Modelling",
+				"Databases",
+				"Networking",
+				"English",
+				"Management (notions)",
+				"Gestion (notions)",
+				"Communication (notions)"
+			]
+		}
+	},
+	"pastExperiences": {}
 }
