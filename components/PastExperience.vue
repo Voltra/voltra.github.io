@@ -1,3 +1,11 @@
+<i18n lang="yaml">
+fr:
+  abilitiesLabel: Compétences mobilisées&nbsp;&colon;
+
+en:
+  abilitiesLabel: Abilities put in practice&colon;
+</i18n>
+
 <template>
 	<ExternalLink :href="experience.company.url">
 		<a-card class="experience" hoverable :title="experience.title">
@@ -12,7 +20,7 @@
 			<p v-html="experience.description"></p>
 			<template v-if="experience.interests.length">
 				<br/>
-				<p>Compétences mobilisées&nbsp;:</p>
+				<p v-html="$t('abilitiesLabel')"/>
 				<ul>
 					<li v-for="interest in experience.interests" :key="interest">
 						{{ interest }}

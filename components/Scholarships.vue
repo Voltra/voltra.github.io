@@ -26,11 +26,15 @@
 					hideOnSinglePage: true,
 					pageSize: 3,
 				},
-				scholarships: [
-					this.$t("studies.polytech"),
-					this.$t("studies.dut"),
-				],
 			};
 		},
+		computed: {
+			scholarships() {
+				return [
+					this.$t("studies.polytech"),
+					this.$t("studies.dut"),
+				];
+			},
+		}
 	}
 </script>

@@ -3,7 +3,7 @@ fr:
   classes: Matières principales&nbsp;&colon;
 
 en:
-  classes: Main classes
+  classes: Notables classes&colon;
 </i18n>
 
 <template>

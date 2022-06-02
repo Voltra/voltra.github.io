@@ -112,5 +112,75 @@
 			]
 		}
 	},
-	"pastExperiences": {}
+	"pastExperiences": {
+		"sept2021": {
+			"timeSpan": "September 2021 - Nowadays",
+			"title": "Front-End Developer",
+			"description": "As part of an 8 years long project, and with swimming pool (previously named SWPL) helping for 4 of those years, I have had the opportunity to join a communication agency that stays bleeding edge, from a technological point of view, and with an ideal work environment. Who knows what the future has in store for us...",
+			"interests": []
+		},
+		"febr2021augu2021": {
+			"timeSpan": "February 2021 - August 2021",
+			"title": "Front-End Developer Internship (credit, paid)",
+			"description": "As part of my engineering studies at the Engineering School of the University of Nantes, I've had to take a 6 months internship that would bring to an end 5 years of study. Swimming pool, who had already helped me with 3 internships in the past, gave me once again the opportunity to do my intership there, as part of the technical team which I'm very familiar with. From entire websites, to taking the technical lead on a project, to emails, to landing pages, I've had the opportunity to deepen my knowledge and mastery of my craft as well as learning more about myself.",
+			"interests": [
+				"Acquiring knowledge (React, NextJS, Docker, Circle CI, etc...)",
+				"General development management skills",
+				"Organisational skills",
+				"Ability to adapt to challenges",
+				"Working as part of a team",
+				"Autonomy"
+			]
+		},
+		"july2020augu2020": {
+			"timeSpan": "July 2020 - August 2020",
+			"title": "Full-Stack Development Intership (non-credit, paid)",
+			"description": "As part of my second year of my studies at the Engineering School of the University of Nantes, most students take internships abroad as it is mandatory for graduating. However, due to the epidemic of Covid-19, these requirements have had to be loosened and eventually removed altogether. To benefit from more experiences in the working world, I have yet again had another opportunity to join the ranks of swimming pool's technical team to help them out. It allowed me to broaden the scope of my technical skills and knowledge (especially of the Drupal CMS) by taking part in the site-building side of things and by creating tools that would make it easier to use for end users. Furthermore, I had the opportunity to work on landing pages as well as redesigns of several websites.",
+			"interests": [
+				"Diverse connex/related skills",
+				"Knowledge of the web development ecosystem",
+				"Understanding of the tools used",
+				"Organisational skills",
+				"Ability to adapt to challenges",
+				"Work as part of a team",
+				"Autonomy"
+			]
+		},
+		"nove2019mai2020": {
+			"timeSpan": "November 2019 - May 2020",
+			"title": "Transversal project: mon-taraud.com",
+			"description": "As part of the second year of Engineering studies at the Engineering School of the University of Nantes, students take part, in teams, in a 6 months project for a company to solve one of their problems. In a team of 3, I was appointed Chief Technical Officer. Therefore I had to define the state of the art of the relevant tools to create the website. State of the art that helped picking the right libraries and tools whilst taking into consideration the various affinities of the team members.",
+			"interests": [
+				"Information Systems modelling",
+				"Agile methodology",
+				"Knowledge of the web development ecosystem",
+				"Workplace communication skills"
+			]
+		},
+		"june2019july2019": {
+			"timeSpan": "June 2019 - July 2019",
+			"title": "Full-Stack Development Internship (credit, paid)",
+			"description": "Intership that marks the end of my first year at the Engineering School of the University of Nantes. As part of the Digital/technicdal team, I helped with tracking users' interactions via Google Tag Manager and custom events. I also migrated websites that were using the previous, now deprecated, LinkedIn API.<br/><br/> I had the opportunity to continue familiarizing myself with Drupal, Wordpress and also, for the first time, Prestashop. I had the opportunity to make a Proof of Concept landing page for the use of Vue in future websites.",
+			"interests": [
+				"Knowledge of the web development ecosystem",
+				"Understanding of the tools used",
+				"Organisational skills",
+				"Ability to adapt to challenges",
+				"Work as part of a team",
+				"Autonomy"
+			]
+		},
+		"apri2018june2018": {
+			"timeSpan": "April 2018 - June 2018",
+			"title": "Front-End Development Internship (credit, paid)",
+			"description": "My very first intership and experience in the workplace, it also serves as the last part of my studies at the University Institute of Technology of Nantes. I had the opportunity to discover how the business world and the common practices in terms of web development. It also helped broaden my horizons in terms of technical skills and knowledge by having to use tools I never heard of (such as Content Management Systems).",
+			"interests": [
+				"Knowledge of the web development ecosystem",
+				"Organisational skills",
+				"Ability to adapt to challenges",
+				"Work as part of a team",
+				"Autonomy"
+			]
+		}
+	}
 }
