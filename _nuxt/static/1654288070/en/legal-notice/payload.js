@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/en/legal-notice", {data:[{}],fetch:{},mutations:void 0});
