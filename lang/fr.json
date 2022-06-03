@@ -1,0 +1,184 @@
+{
+	"gdprGuard": {
+		"features": {
+			"name": "Fonctionnalité",
+			"description": "Données nécessaires au fonctionnement global du site"
+		},
+		"i18n_redirected": {
+			"name": "i18n_redirected",
+			"description": "Sauvegarde de la langue actuelle"
+		},
+
+		"RGPD": {
+			"name": "GDPR",
+			"description": "Gestion des préférences relatives à la protection des données"
+		},
+		"gdpr": {
+			"name": "gdpr",
+			"description": "Sauvegarde de vos préférences RGPD"
+		},
+		"gdpr__version": {
+			"name": "gdpr__version",
+			"description": "Version des préférences RGPD"
+		}
+	},
+	"projects": {
+		"website": {
+			"title": "Site officiel",
+			"description": "Mon site statique. Progressive Web App réalisée via l'écosystème Vue. Reposant précédemment sur Vue CLI, il a été récemment migré vers Nuxt 2. Bien que pour l'instant cordonnier mal chaussé, une version 2 est en préparation proposant un véritable site web complet et une charte graphique plus chattoyante."
+		},
+		"scientistOath": {
+			"title": "Le serment du Scientifique",
+			"description": "Un projet visant à fournir une généralisation du Serment d'Hippocrate à tous les scientifiques, y compris dans les métiers liés à l'informatique."
+		},
+		"kiplin": {
+			"title": "Kiplin",
+			"description": "Lutter contre la sédentarité et par le jeu, telle est la mission de Kiplin. C'est avec grand plaisir que j'ai pu, en tant qu'Intégrateur Web chez swimming pool, poser ma pierre à l'édifice qu'est la refonte de leur site web.",
+			"url": "https://www.kiplin.com/fr/"
+		},
+		"monTaraud": {
+			"title": "Projet Transversal (mon-taraud.com)",
+			"description": "Site web utilitaire permettant de déterminer facilement les références produit d'un taraud à partir de ses dimensions. Réalisé dans le cadre de mes études à Polytech Nantes, sur toute une année. Le but du projet transversal étant de mettre les étudiants en situation réelle avec contact client, retours, etc&hellip;&nbsp;. Étant reponsable des choix techniques, le site a été réalisé en Vue et Adonis.",
+			"urls": {
+				"polytech": "https://polytech.univ-nantes.fr"
+			}
+		},
+		"$json": {
+			"title": "Client JSON ($json)",
+			"description": "Client HTTP spécialisé dans les communications JSON permettant d'échanger facilement des données avec une API REST par exemple. Il s'agit en réalité d'une petite surcouche pour l'API Fetch."
+		},
+		"mvea": {
+			"title": "MVEA",
+			"description": "Patron d'architecture logicielle, variante de MVC, en cours de spécification. Il vise à augmenter la réutilisabilité des composants ainsi qu'à maximiser la séparation des responsabilités tout en intégrant et en spécifiant des pratiques récurrentes dans les applications MVC."
+		},
+		"validatueur": {
+			"title": "Validatueur",
+			"description": "Bibliothèque JavaScript d'aissainissement et de validation visant à être utilisable dans toute application, quelle que soit la complexité des formulaires. Destiné à pouvoir être utilisé à la fois pour la validation côté client (UX) et pour la validation côté serveur (sécurité)."
+		},
+		"gdprGuard": {
+			"title": "GDPR Guard",
+			"description": "Bibliothèque de gestion de préférences RGPD permettant un listing précis ainsi qu'une logique conditionnelle en fonction des paramètres enregistrés par l'utilisateur. Le but étant de permettre une flexibilité d'utilisation aussi bien du point de vue utilisateur que du point de vue développeur. À noter qu'il existe divers outils permettant l'intégration de la bibliothèque avec d'autres technologies (e.g. frameworks front-end)."
+		},
+		"lightquery": {
+			"title": "Lightquery",
+			"description": "Mon premier projet Open Source, une alternative plus légère et plus moderne à jQuery. Réécrit entièrement en 2020 pour proposer une véritable alternative propre et légère."
+		},
+		"lazyCollection": {
+			"title": "Lazy collection",
+			"description": "Bibliothèque de manipulation de collections en PHP favorisant l'expressivité tout en gardant une complexité linéaire indépendamment du nombre d'opérations."
+		}
+	},
+	"studies": {
+		"polytech": {
+			"year": 2021,
+			"title": "Formation d'Ingénieur en Informatique",
+			"description": "Cycle de 3 ans dès BAC+2 aboutissant au titre d'ingénieur.",
+			"school": {
+				"name": "Polytech Nantes",
+				"url": "https://polytech.univ-nantes.fr"
+			},
+			"interests": [
+				"Programmation (logiciel)",
+				"Multimédia",
+				"Bases de données",
+				"Réseaux",
+				"Anglais",
+				"Gestion de projets (notions)",
+				"Économie (notions)",
+				"Communication (notions)",
+				"Recherche (notions)"
+			]
+		},
+		"dut": {
+			"year": 2018,
+			"title": "DUT Informatique",
+			"description": "Formation de 2 ans aboutissant au titre analyste développeur.",
+			"school": {
+				"name": "IUT de Nantes",
+				"url": "https://iutnantes.univ-nantes.fr"
+			},
+			"interests": [
+				"Algorithmique",
+				"Programmation (logiciel, web, mobile)",
+				"Conception",
+				"Bases de données",
+				"Réseaux",
+				"Anglais",
+				"Économie (notions)",
+				"Gestion (notions)",
+				"Communication (notions)"
+			]
+		}
+	},
+	"pastExperiences": {
+		"sept2021": {
+			"timeSpan": "Septembre 2021 - Présent",
+			"title": "Intégrateur web",
+			"description": "Au sein d'un projet long de 8 ans et un accompagnement sur 4 ans par swimming pool (anciennement SWPL), j'ai la chance de rejoindre une agence de communication à la pointe de la technologie et avec un cadre de travail idéal. Nous verrons bien ce que nous réserve l'avenir ...",
+			"interests": []
+		},
+		"febr2021augu2021": {
+			"timeSpan": "Février 2021 - Août 2021",
+			"title": "Stage en intégration web",
+			"description": "Dans le cadre de ma formation en cycle ingénieur à Polytech, j'ai été amené à mener un stage fonctionnel (de fin d'étude) d'une durée de 6 mois. SWPL, qui m'a déjà accompagné sur 3 stages au préalable, m'offre l'opportunité de mener ce stage au sein de l'équipe technique que je connais très bien. Entre intégration complète de sites, lead d'un projet web et intégration d'emails ou de landing page, j'ai pu à la fois approfondir ma maîtrise technique toute en apprenant plus sur moi-même",
+			"interests": [
+				"Acquisition de connaissances (React, NextJS, Docker, Circle CI, etc...)",
+				"Compétences générales de gestion de développement",
+				"Organisation",
+				"Capacité d'adaptation",
+				"Travail en équipe",
+				"Autonomie"
+			]
+		},
+		"july2020augu2020": {
+			"timeSpan": "Juillet 2020 - Août 2020",
+			"title": "Stage en développement web (Full Stack)",
+			"description": "Dans le cadre de la seconde année du cycle ingénieur à Polytech, la plupart des élèves effectuent un stage à l'étranger pour remplir les obligations de la formation d'ingénieur. Suite à la pandémie de Covid-19, les obligations de mobilité à l'étranger ont dû être supprimées. Pour bénéficier de plus d'expérience professionnelle, j'ai pu à nouveau rejoindre l'équipe technique de SWPL et leur prêter main forte. J'ai pu entre autre approfondir mes connaissances du CMS Drupal en participant au sitebuilding et en mettant en place divers outils simplifiant l'utilisation par le client final. De plus, j'ai pu aider à l'intégration de landing pages ainsi qu'à la refonte graphique de plusieurs sites.",
+			"interests": [
+				"Compétences connexes diverses",
+				"Connaissance de l'écosystème du monde du web",
+				"Connaissance des technologies utilisées",
+				"Organisation",
+				"Capacité d'adaptation",
+				"Travail en équipe",
+				"Autonomie"
+			]
+		},
+		"nove2019mai2020": {
+			"timeSpan": "Novembre 2019 - Mai 2020",
+			"title": "Projet transversal : mon-taraud.com",
+			"description": "Dans le cadre de la seconde année du cycle ingénieur à Polytech, les élèves prennent part à un projet annuel en lien avec un entreprise pour répondre à un besoin réel. Au sein d'une équipe de 3 étudiants, j'ai occupé le rôle de directeur technique. J'ai pu notamment définir un état de l'art des technologies pertinentes à la réalisation du projet&nbsp;&nbsp; État de l'art qui a servi notamment à déterminer les technologies à utiliser et ce en prenant en compte les affinités des membres de l'équipe pour cesdites technologies.",
+			"interests": [
+				"Conception de Systèmes d'Information",
+				"Méthodologie Agile",
+				"Connaissance de l'écosystème du monde du web",
+				"Communication au travail"
+			]
+		},
+		"june2019july2019": {
+			"timeSpan": "Juin 2019 - Juillet 2019",
+			"title": "Stage en développement web (Full Stack)",
+			"description": "Stage de fin de première année de cycle ingénieur à Polytech. Au sein du pôle Digital, j'ai pu assister au suivi des interactions utilisateurs via Google Tag Manager et l'émission d'évènements personnalisé. J'ai également pu réaliser la migration de sites utilisant une version de l'API LinkedIn ayant été dépréciée en vue d'un arrêt de fonctionnement futur.<br/> <br/> J'ai de surcroît pu continuer à me familiariser avec les systèmes de gestion de contenu Drupal et Wordpress tout en utilisant pour la première fois l'outil Prestashop. J'ai également pu mettre en place une landing page qui a servi de Proof of Concept pour l'utilisation de Vue pour les futurs sites web de l'agence.",
+			"interests": [
+				"Connaissance de l'écosystème du monde du web",
+				"Connaissance des technologies utilisées",
+				"Organisation",
+				"Capacité d'adaptation",
+				"Travail en équipe",
+				"Autonomie"
+			]
+		},
+		"apri2018june2018": {
+			"timeSpan": "Avril 2018 - Juin 2018",
+			"title": "Stage en intégration web",
+			"description": "Stage de fin de formation en IUT et également premier contact avec le monde de l'entreprise. J'ai pu découvrir en partie le monde de l'entreprise et des pratiques en terme de développement et intégration web. J'ai également pu élargir l'horizon de mes connaissances avec diverses nouvelles technologies telles que les systèmes de gestion de contenu ou MJML.",
+			"interests": [
+				"Connaissance de l'écosystème du monde du web",
+				"Organisation",
+				"Capacité d'adaptation",
+				"Travail en équipe",
+				"Autonomie"
+			]
+		}
+	}
+}

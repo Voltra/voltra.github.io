@@ -1,0 +1,186 @@
+{
+	"gdprGuard": {
+		"features": {
+			"name": "Features",
+			"description": "Required for the website to work properly"
+		},
+		"i18n_redirected": {
+			"name": "i18n_redirected",
+			"description": "Saves the current selected locale"
+		},
+
+		"RGPD": {
+			"name": "GDPR",
+			"description": "General Data Protection Regulation"
+		},
+		"gdpr": {
+			"name": "gdpr",
+			"description": "GDPR preferences"
+		},
+		"gdpr__version": {
+			"name": "gdpr__version",
+			"description": "GDPR preferences' version"
+		}
+	},
+	"projects": {
+		"website": {
+			"title": "Official website",
+			"description": "My static website. PWA made with love and using Vue's ecosystem. Previously made with Vue CLI, it has been recently migrated to Nuxt 2. Even though right now my website doesn't reflect what I can achieve in terms of UI, a v2 is in the works that will be a fully-featured website and much better UI and UX."
+		},
+		"scientistOath": {
+			"title": "The Scientist's Oath",
+			"description": "A project aiming to provide a sort of generalized Hippocratic Oath for all Scientists, including but not limited to Computer Scientists. An Oath to live by for Scientists all around the globe.",
+			"url": "https://www.kiplin.com/en/"
+		},
+		"kiplin": {
+			"title": "Kiplin",
+			"description": "Fighting via games against too much sedentarity, such is Kiplin's mission. It's with great pleasure that I could, as a Front-End Developer at swimming pool, help bringing to life their new website."
+		},
+		"monTaraud": {
+			"title": "Find the tap you need (mon-taraud.com)",
+			"description": "A website made in less than a year as part of my studies at Polytech Nantes (the Engineering School of the University of Nantes). A tool to help a local business' clients (and others) determining the dimensions of their taps and the related product references. The goal of that project was to put students in a real-life project situation. Being the CTO, this website was made using Vue and AdonisJS.",
+			"urls": {
+				"polytech": "https://polytech.univ-nantes.fr/en"
+			}
+		},
+		"$json": {
+			"title": "JSON Client ($json)",
+			"description": "HTTP client specialized to handle JSON-based communication with a REST API for instance. It's just a tiny wrapper around the Fetch API"
+		},
+		"mvea": {
+			"title": "MVEA",
+			"description": "Architectural pattern, derivative of MVC, whose specifications are being written. It aims to maximize reusability thanks to a higher degree of separation of concerns whilst taking into account modern uses and tools of MVC applications."
+		},
+		"validatueur": {
+			"title": "Validatueur",
+			"description": "JavaScript validation and sanitization library that aims to be easy to use and integrate to any application, no matter its complexity. Designed to be usable both for front-end validation (for UX) and back-end validation (for security)."
+		},
+		"gdprGuard": {
+			"title": "GDPR Guard",
+			"description": "Library that makes it easy to be GDPR compliant with personal data management. It allows you to list every piece of data to the user whilst being able to have conditional logic to execute code depending on the user's preferences. The goal of the library being to provide flexibility of use for both the users and the developers. Note that there's a whole ecosystem design to help with integrating the library with other stuff (such as front-end frameworks, for instance)."
+		},
+		"lightquery": {
+			"title": "Lightquery",
+			"description": "My very first Open Source project: a lighter and more modern alternative to jQuery. Completely rewritten from the ground up in 2020 to truly offer a cleaner and lighter alternative."
+		},
+		"lazyCollection": {
+			"title": "Lazy collection",
+			"description": "PHP library for collections manipulation that helps make code more expressive whilst maintaining a linear cyclomatic complexity regardless of the number of operations."
+		}
+	},
+	"studies": {
+		"polytech": {
+			"year": 2021,
+			"title": "Engineering degree in Computer Science",
+			"description": "3 years program, after 2 years of undergraduate studies, to get the title of Engineer",
+			"school": {
+				"name": "Polytech Nantes (the Engineering School of the University of Nantes)",
+				"url": "https://polytech.univ-nantes.fr/en"
+			},
+			"interests": [
+				"Programming",
+				"Software Modelling",
+				"Multimedia",
+				"Databases",
+				"Networking",
+				"English",
+				"Project management (notions)",
+				"Economy (notions)",
+				"Communication (notions)",
+				"Research (notions)"
+			]
+		},
+		"dut": {
+			"year": 2018,
+			"title": "University Diploma of Technology in Computer Science",
+			"description": "2 years undergraduate studies",
+			"school": {
+				"name": "University Institute of Technology of Nantes",
+				"url": "https://iutnantes.univ-nantes.fr"
+			},
+			"interests": [
+				"Algorithms",
+				"Data Structures",
+				"Programming (software, web, mobile)",
+				"Software Modelling",
+				"Databases",
+				"Networking",
+				"English",
+				"Management (notions)",
+				"Gestion (notions)",
+				"Communication (notions)"
+			]
+		}
+	},
+	"pastExperiences": {
+		"sept2021": {
+			"timeSpan": "September 2021 - Nowadays",
+			"title": "Front-End Developer",
+			"description": "As part of an 8 years long project, and with swimming pool (previously named SWPL) helping for 4 of those years, I have had the opportunity to join a communication agency that stays bleeding edge, from a technological point of view, and with an ideal work environment. Who knows what the future has in store for us...",
+			"interests": []
+		},
+		"febr2021augu2021": {
+			"timeSpan": "February 2021 - August 2021",
+			"title": "Front-End Developer Internship (credit, paid)",
+			"description": "As part of my engineering studies at the Engineering School of the University of Nantes, I've had to take a 6 months internship that would bring to an end 5 years of study. Swimming pool, who had already helped me with 3 internships in the past, gave me once again the opportunity to do my intership there, as part of the technical team which I'm very familiar with. From entire websites, to taking the technical lead on a project, to emails, to landing pages, I've had the opportunity to deepen my knowledge and mastery of my craft as well as learning more about myself.",
+			"interests": [
+				"Acquiring knowledge (React, NextJS, Docker, Circle CI, etc...)",
+				"General development management skills",
+				"Organisational skills",
+				"Ability to adapt to challenges",
+				"Working as part of a team",
+				"Autonomy"
+			]
+		},
+		"july2020augu2020": {
+			"timeSpan": "July 2020 - August 2020",
+			"title": "Full-Stack Development Intership (non-credit, paid)",
+			"description": "As part of my second year of my studies at the Engineering School of the University of Nantes, most students take internships abroad as it is mandatory for graduating. However, due to the epidemic of Covid-19, these requirements have had to be loosened and eventually removed altogether. To benefit from more experiences in the working world, I have yet again had another opportunity to join the ranks of swimming pool's technical team to help them out. It allowed me to broaden the scope of my technical skills and knowledge (especially of the Drupal CMS) by taking part in the site-building side of things and by creating tools that would make it easier to use for end users. Furthermore, I had the opportunity to work on landing pages as well as redesigns of several websites.",
+			"interests": [
+				"Diverse connex/related skills",
+				"Knowledge of the web development ecosystem",
+				"Understanding of the tools used",
+				"Organisational skills",
+				"Ability to adapt to challenges",
+				"Work as part of a team",
+				"Autonomy"
+			]
+		},
+		"nove2019mai2020": {
+			"timeSpan": "November 2019 - May 2020",
+			"title": "Transversal project: mon-taraud.com",
+			"description": "As part of the second year of Engineering studies at the Engineering School of the University of Nantes, students take part, in teams, in a 6 months project for a company to solve one of their problems. In a team of 3, I was appointed Chief Technical Officer. Therefore I had to define the state of the art of the relevant tools to create the website. State of the art that helped picking the right libraries and tools whilst taking into consideration the various affinities of the team members.",
+			"interests": [
+				"Information Systems modelling",
+				"Agile methodology",
+				"Knowledge of the web development ecosystem",
+				"Workplace communication skills"
+			]
+		},
+		"june2019july2019": {
+			"timeSpan": "June 2019 - July 2019",
+			"title": "Full-Stack Development Internship (credit, paid)",
+			"description": "Intership that marks the end of my first year at the Engineering School of the University of Nantes. As part of the Digital/technicdal team, I helped with tracking users' interactions via Google Tag Manager and custom events. I also migrated websites that were using the previous, now deprecated, LinkedIn API.<br/><br/> I had the opportunity to continue familiarizing myself with Drupal, Wordpress and also, for the first time, Prestashop. I had the opportunity to make a Proof of Concept landing page for the use of Vue in future websites.",
+			"interests": [
+				"Knowledge of the web development ecosystem",
+				"Understanding of the tools used",
+				"Organisational skills",
+				"Ability to adapt to challenges",
+				"Work as part of a team",
+				"Autonomy"
+			]
+		},
+		"apri2018june2018": {
+			"timeSpan": "April 2018 - June 2018",
+			"title": "Front-End Development Internship (credit, paid)",
+			"description": "My very first intership and experience in the workplace, it also serves as the last part of my studies at the University Institute of Technology of Nantes. I had the opportunity to discover how the business world and the common practices in terms of web development. It also helped broaden my horizons in terms of technical skills and knowledge by having to use tools I never heard of (such as Content Management Systems).",
+			"interests": [
+				"Knowledge of the web development ecosystem",
+				"Organisational skills",
+				"Ability to adapt to challenges",
+				"Work as part of a team",
+				"Autonomy"
+			]
+		}
+	}
+}
