@@ -9,7 +9,7 @@ export default {
 	loading: "~/components/Loader.vue",
 	loadingIndicator: "~/components/Loader.vue",
 	router: {
-		mode: "hash",
+		// mode: "hash"
 	},
 
 	i18n: {
@@ -47,6 +47,7 @@ export default {
 
 	sitemap: {
 		hostname: process.env.NUXT_ENV_BASE_URL,
+		i18n: true,
 	},
 
 	pwa: {

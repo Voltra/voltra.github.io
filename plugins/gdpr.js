@@ -5,7 +5,7 @@ import { addMonths } from "date-fns";
 
 const storeKey = "gdpr";
 const versionKey = `${storeKey}__version`;
-const version = "3.2.0";
+const version = "3.3.0";
 
 const expiration = () => addMonths(new Date(), 13);
 
@@ -15,10 +15,8 @@ const factory = () => {
 	return GdprManagerBuilder.make()
 		.startRequiredGroup(GdprStorage.None, "features", "")
 			.withEnabledGuard("i18n_redirected", "", GdprStorage.Cookie)
-		.endGroup()
-		.startRequiredGroup(GdprStorage.LocalStorage, "RGPD", "")
-			.withEnabledGuard(storeKey, "")
-			.withEnabledGuard(versionKey, "")
+			.withEnabledGuard(storeKey, "", GdprStorage.LocalStorage)
+			.withEnabledGuard(versionKey, "", GdprStorage.LocalStorage)
 		.endGroup()
 	.build();
 };

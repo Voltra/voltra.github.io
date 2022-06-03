@@ -1,10 +1,18 @@
 <i18n lang="yaml">
 fr:
+  seo:
+    title: Me contacter
+    description: Me contacter dans un cadre professionnel
+    keywords: contact,professionnel,linkedin,mail
   title: Me Contacter
   intro: Pour plus d'informations ou pour me contacter dans un cadre
     professionnel, merci d'utiliser les moyens suivants&nbsp;&colon;
 
 en:
+  seo:
+    title: Get in touch
+    description: Get in touch, for business only
+    keywords: contact,professional,business,work,linkedin,mail
   title: Get in touch
   intro: For more info, or to contact me for business, use the means below&colon;
 </i18n>
@@ -37,21 +45,12 @@ en:
 </template>
 
 <script>
-	import { makeMeta } from "~/js/utils";
+	import { pageMixin } from "~/js/mixins/page";
 
 	const placement = "bottomRight";
 
 	export default {
-		head: makeMeta({
-			title: "Me contacter",
-			description: "Me contacter dans un cadre professionnel",
-			tags: [
-				"contact",
-				"professionnel",
-				"linkedin",
-				"mail",
-			],
-		}),
+		mixins: [pageMixin],
 		data() {
 			return {
 				linkedin: "https://www.linkedin.com/in/ludwig-guerin",
