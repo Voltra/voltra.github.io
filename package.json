@@ -7,7 +7,9 @@
 		"dev": "nuxt",
 		"build": "nuxt build",
 		"start": "nuxt start",
-		"generate": "nuxt generate"
+		"generate": "nuxt generate",
+		"predeploy:site": "npm run generate",
+		"deploy:site": "gh-pages -d dist"
 	},
 	"dependencies": {
 		"@hscmap/vue-window": "^2.4.4",
@@ -32,6 +34,7 @@
 	},
 	"devDependencies": {
 		"@nuxt/types": "~2.15.0",
+		"gh-pages": "^4.0.0",
 		"less": "^3.11.3",
 		"less-loader": "^6.1.0",
 		"sass": "^1.52.1",
