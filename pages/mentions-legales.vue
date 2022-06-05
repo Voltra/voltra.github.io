@@ -25,7 +25,7 @@ fr:
           il est possible de supprimer ces données à tout moment et ce à
           la guise de l'utilisateur.
     hosting:
-      hostedBy: Ce site internet est hébergé par Github par le biais du service
+      hostedBy: Ce site internet est hébergé via
       ownerStatusLabel: Statut du propriétaire&nbsp;&colon;
       ownerStatus: Personne physique
       emailLabel: Adresse de courrier électronique&nbsp;&colon;
@@ -68,7 +68,7 @@ en:
           No data is collected for analysis purposes, and thus all personal data are stored on the user's machine.
           Therefore, said data can be accessed, modified or deleted at any time at the user's discretion.
     hosting:
-      hostedBy: This website is hosted using
+      hostedBy: This website is hosted via
       ownerStatusLabel: Owner status&colon;
       ownerStatus: Physical person
       emailLabel: Email address&colon;
@@ -110,9 +110,9 @@ en:
 
 			<a-collapse-panel :key="2" :header="$t('headers.hosting')">
 				{{ $t('content.hosting.hostedBy') }}
-				<ExternalLink href="https://pages.github.com/">
-					Github Pages.
-				</ExternalLink>
+				<ExternalLink href="https://www.infomaniak.com">
+					Infomaniak
+				</ExternalLink>.
 
 				<ul>
 					<li>
@@ -139,12 +139,12 @@ en:
 					</li>
 					<li>
 						<strong v-html="$t('content.hosting.hostingLabel')"/>
-						Github
+						Infomaniak
 					</li>
 					<li>
 						<strong v-html="$t('content.hosting.contactHostingLabel')"/>
-						<ExternalLink :href="`mailto:${githubMail}`">
-							{{ githubMail }}
+						<ExternalLink :href="`mailto:${infomaniakMail}`">
+							{{ infomaniakMail }}
 						</ExternalLink>
 					</li>
 				</ul>
@@ -185,14 +185,11 @@ en:
 				en: "/legal-notice",
 			}
 		},
-		head: makeMeta({
-			title: "Mentions légales",
-			description: "Mentions légales et informations relatives à la protection des données.",
-		}),
 		data(){
 			return {
 				mail: `ludwig.guerin.98${arobase}gmx.fr`,
 				githubMail: "privacy@github.com",
+				infomaniakMail: "contact@infomaniak.ch",
 			};
 		},
 		methods: {
