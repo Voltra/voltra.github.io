@@ -47,7 +47,19 @@ en:
 					alt: "Logo",
 					size: "large",
 				},
-				routes: [
+			};
+		},
+		computed: {
+			selectedKeys(){
+				const routeKey = this.extractKey(this.$route);
+
+				return asSequence(this.routes)
+					.map(this.extractKey)
+					.filter(key => key === routeKey)
+					.toArray();
+			},
+			routes() {
+				return [
 					{
 						title: this.$t('homeLabel'),
 						icon: "home",
@@ -68,17 +80,7 @@ en:
 						icon: "notification",
 						key: "contact",
 					},
-				],
-			};
-		},
-		computed: {
-			selectedKeys(){
-				const routeKey = this.extractKey(this.$route);
-
-				return asSequence(this.routes)
-					.map(this.extractKey)
-					.filter(key => key === routeKey)
-					.toArray();
+				];
 			},
 		},
 		methods: {
